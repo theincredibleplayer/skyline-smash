@@ -2521,18 +2521,6 @@ pub mod root {
 			}
         }
 
-		pub mod FighterSpecializer_Ryu {
-            #[allow(unused_imports)]
-            use super::super::super::root;
-            extern "C" {
-                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Ryu23update_opponent_lr_1on1ERNS_26BattleObjectModuleAccessorEi"]
-                pub fn update_opponent_lr_1on1(
-                	module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					arg2: i32
-                ) -> u64;
-            }
-        }
-
 		pub mod FighterSpecializer_Dolly {
             #[allow(unused_imports)]
             use super::super::super::root;
