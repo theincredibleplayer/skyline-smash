@@ -13137,9 +13137,9 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind20SlowModule__set_implEPNS_26BattleObjectModuleAccessorEiiibj"]
 					pub fn set(
 						arg1: *mut root::app::BattleObjectModuleAccessor,
-						frames: libc::c_int,
+						arg2: libc::c_int,
 						slow_mul: libc::c_int,
-						arg4: libc::c_int,
+						frames: libc::c_int,
 						arg5: bool,
 						arg6: libc::c_uint,
 					);
