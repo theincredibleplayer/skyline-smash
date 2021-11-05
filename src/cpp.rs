@@ -13191,8 +13191,8 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind26SlowModule__set_whole_implEPNS_26BattleObjectModuleAccessorEhi"]
 					pub fn set_whole(
 						arg1: *mut root::app::BattleObjectModuleAccessor,
-						frames: libc::c_uchar,
-						slow_mul: libc::c_int,
+						slow_mul: libc::c_uchar,
+						frames: libc::c_int,
 					);
 				}
 				extern "C" {
