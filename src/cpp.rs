@@ -10150,6 +10150,13 @@ pub mod root {
 						arg3: libc::c_int,
 					) -> u64;
 				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind50MotionModule__enable_remove_2nd_change_motion_implEPNS_26BattleObjectModuleAccessorEb"]
+					pub fn enable_remove_2nd_change_motion(
+						arg1: *mut root::app::BattleObjectModuleAccessor,
+						arg2: bool,
+					) -> u64;
+				}
 			}
 			pub mod WorkModule {
 				#[allow(unused_imports)]
