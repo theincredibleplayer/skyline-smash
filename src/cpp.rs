@@ -2144,6 +2144,29 @@ pub mod root {
 
         }
 
+		pub mod FighterSpecializer_Peach {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Peach17final_init_statusERNS_21FighterModuleAccessorE"]
+                pub fn final_init_status(
+                	arg1: *mut root::app::FighterModuleAccessor
+                ) -> u64;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Peach22final_rand_create_itemERNS_21FighterModuleAccessorE"]
+                pub fn final_rand_create_item(
+                	arg1: *mut root::app::FighterModuleAccessor
+                ) -> u64;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Peach28special_lw_check_num_of_itemERNS_21FighterModuleAccessorE"]
+                pub fn special_lw_check_num_of_item(
+                	arg1: *mut root::app::FighterModuleAccessor
+                ) -> u64;
+            }
+        }
+
         pub mod FighterSpecializer_Pikmin {
             #[allow(unused_imports)]
             use super::super::super::root;
