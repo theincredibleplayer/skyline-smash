@@ -1647,6 +1647,18 @@ pub mod root {
 				) -> bool;
 			}
 		}
+
+		pub mod KineticUtility {
+			#[allow(unused_imports)]
+			use super::super::super::root;
+			extern "C" {
+				#[link_name = "\u{1}_ZN3app14KineticUtility19clear_unable_energyEiRNS_26BattleObjectModuleAccessorE"]
+				pub fn clear_unable_energy(
+					kinetic_energy_id: i32,
+					module_accessor: *mut root::app::BattleObjectModuleAccessor
+				);
+			}
+		}
         
         pub mod utility {
             #[allow(unused_imports)]
