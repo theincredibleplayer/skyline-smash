@@ -8851,7 +8851,7 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind36CatchModule__capture_pos_x_diff_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn capture_pos_x_diff(
 						arg1: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> f32;
 				}
 			}
 			pub mod DamageLog {
