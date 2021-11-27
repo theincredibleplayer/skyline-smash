@@ -2568,6 +2568,17 @@ pub mod root {
             }
         }
 
+		pub mod FighterSpecializer_Trail {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Trail12change_magicERNS_7FighterE"]
+                pub fn change_magic(
+                	arg1: *mut root::app::Fighter
+                );
+            }
+        }
+
         pub mod WeaponSpecializer_PTrainerPTrainer {
             #[allow(unused_imports)]
             use super::super::super::root;
