@@ -2690,6 +2690,22 @@ pub mod root {
                 ) -> u64;
 			}
 		}
+		pub mod WeaponSpecializer_EFlameEsword {
+            #[allow(unused_imports)]
+			use super::super::super::root;
+			extern "C" {
+				#[link_name = "\u{1}_ZN3app30WeaponSpecializer_EFlameEsword23energy_motion_set_angleERNS_26BattleObjectModuleAccessorEf"]
+                pub fn energy_motion_set_angle(
+					arg1: *mut root::app::BattleObjectModuleAccessor,
+					arg2: f32,
+                );
+                #[link_name = "\u{1}_ZN3app30WeaponSpecializer_EFlameEsword31energy_motion_set_speed_mul_2ndERNS_26BattleObjectModuleAccessorERKN3phx8Vector2fE"]
+                pub fn energy_motion_set_speed_mul_2nd(
+					arg1: *mut root::app::BattleObjectModuleAccessor,
+					arg2: root::phx::Vector2f,
+                );
+			}
+		}
 
 		pub mod lua_bind {
 			#[allow(unused_imports)]
