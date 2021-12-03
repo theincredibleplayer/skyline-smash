@@ -15983,7 +15983,7 @@ pub mod root {
 					pub fn get_sum_speed_length(
 						arg1: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_int,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					/// Returns the current velocity based on the specified kinetic energy attribute as a Vector3f
