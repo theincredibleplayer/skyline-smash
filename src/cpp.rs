@@ -19554,11 +19554,11 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd15get_value_floatEP9lua_Statei"]
-                pub fn get_value_float(arg1: u64, arg2: libc::c_int);
+                pub fn get_value_float(arg1: u64, arg2: libc::c_int) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd13get_value_intEP9lua_Statei"]
-                pub fn get_value_int(arg1: u64, arg2: libc::c_int);
+                pub fn get_value_int(arg1: u64, arg2: libc::c_int) -> i32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd9is_excuteEP9lua_State"]
