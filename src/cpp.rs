@@ -364,8 +364,8 @@ pub mod root {
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
         pub struct BattleObjectModuleAccessor {
-            pub _address: u64,
-            pub info: u32
+            pub vtable: u64,
+            pub battle_object_id: u32
         }
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
