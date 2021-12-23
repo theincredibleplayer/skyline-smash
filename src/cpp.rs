@@ -193,7 +193,12 @@ pub mod root {
         #[derive(Copy, Clone, Default, Debug)]
         #[repr(C)]
         pub struct BattleObject {
-            pub _address: u64
+            pub vtable: *const *const skyline::libc::c_void,
+			pub battle_object_id: u32,
+			_xC: u32,
+			_x10: u64,
+			_x18: u64,
+			pub module_accessor: *mut root::app::BattleObjectModuleAccessor
         }
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
