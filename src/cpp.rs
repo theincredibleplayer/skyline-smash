@@ -1669,7 +1669,7 @@ pub mod root {
             #[allow(unused_imports)]
             use super::super::super::root;
             pub fn get_category(module_accessor: &mut root::app::BattleObjectModuleAccessor) -> i32 {
-                return (module_accessor.info >> 28) as u8 as i32;
+                return (module_accessor.battle_object_id >> 28) as u8 as i32;
             }
 
             extern "C" {
