@@ -190,7 +190,7 @@ pub mod root {
         #[repr(transparent)]
         #[derive(Debug, Copy, Clone)]
         pub struct enSEType(pub i32);
-        #[derive(Copy, Clone, Default, Debug)]
+        #[derive(Copy, Clone, Debug)]
         #[repr(C)]
         pub struct BattleObject {
             pub vtable: *const *const skyline::libc::c_void,
