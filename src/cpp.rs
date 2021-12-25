@@ -195,7 +195,7 @@ pub mod root {
         pub struct BattleObject {
             pub vtable: *const *const skyline::libc::c_void,
 			pub battle_object_id: u32,
-			_xC: u32,
+			pub kind: u32,
 			_x10: u64,
 			_x18: u64,
 			pub module_accessor: *mut root::app::BattleObjectModuleAccessor
