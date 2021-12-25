@@ -197,7 +197,7 @@ pub mod root {
 			pub battle_object_id: u32,
 			pub kind: u32,
 			_x10: u64,
-			pub agent_kind_hash: root::phx::Hash40
+			pub agent_kind_hash: root::phx::Hash40,
 			pub module_accessor: *mut root::app::BattleObjectModuleAccessor
         }
         #[repr(C)]
