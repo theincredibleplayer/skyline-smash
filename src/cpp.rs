@@ -20009,11 +20009,11 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy18get_stable_speed_xEP9lua_State"]
-                pub fn get_stable_speed_x(arg1: u64);
+                pub fn get_stable_speed_x(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy18get_stable_speed_yEP9lua_State"]
-                pub fn get_stable_speed_y(arg1: u64);
+                pub fn get_stable_speed_y(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy20is_gravity_fix_accelEP9lua_State"]
