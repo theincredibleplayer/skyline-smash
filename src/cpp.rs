@@ -19875,6 +19875,12 @@ pub mod root {
 				#[link_name = "\u{1}_ZN3app14sv_information9slow_rateEv"]
 				pub fn slow_rate() -> f32;
 			}
+			extern "C" {
+				#[link_name = "\u{1}_ZN3app14sv_information16damage_log_valueEP9lua_State"]
+				pub fn damage_log_value(
+					lua_state: u64
+				) -> i32;
+			}
 		}
         pub mod sv_kinetic_energy {
             #[allow(unused_imports)]
