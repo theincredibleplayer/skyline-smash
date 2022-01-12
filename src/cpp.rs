@@ -20699,8 +20699,6 @@ pub mod root {
 		}
 
 		impl core::ops::DerefMut for L2CAgent {
-			type Target = root::app::BattleObject;
-
 			fn deref_mut(&mut self) -> &mut Self::Target {
 				unsafe {
 					std::mem::transmute(self.battle_object)
