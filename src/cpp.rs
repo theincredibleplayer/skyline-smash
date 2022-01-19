@@ -200,6 +200,25 @@ pub mod root {
 			pub agent_kind_hash: root::phx::Hash40,
 			pub module_accessor: *mut root::app::BattleObjectModuleAccessor
         }
+
+		impl core::ops::Deref for BattleObject {
+			type Target = root::app::BattleObjectModuleAccessor;
+
+			fn deref(&self) -> &Self::Target {
+				unsafe {
+					std::mem::transmute(self.module_accessor)
+				}
+			}
+		}
+
+		impl core::ops::DerefMut for BattleObject {
+			fn deref_mut(&mut self) -> &mut Self::Target {
+				unsafe {
+					std::mem::transmute(self.module_accessor)
+				}
+			}
+		}
+
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
         pub struct Article {
@@ -20668,6 +20687,25 @@ pub mod root {
             pub battle_object: *mut root::app::BattleObject,
             pub module_accessor: *mut root::app::BattleObjectModuleAccessor
         }
+
+		impl core::ops::Deref for L2CAgent {
+			type Target = root::app::BattleObject;
+
+			fn deref(&self) -> &Self::Target {
+				unsafe {
+					std::mem::transmute(self.battle_object)
+				}
+			}
+		}
+
+		impl core::ops::DerefMut for L2CAgent {
+			fn deref_mut(&mut self) -> &mut Self::Target {
+				unsafe {
+					std::mem::transmute(self.battle_object)
+				}
+			}
+		}
+
         extern "C" {
             #[link_name = "\u{1}_ZN3lib8L2CAgentC2EP9lua_State"]
             pub fn L2CAgent_L2CAgent_constr(
