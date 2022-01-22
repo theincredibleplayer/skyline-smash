@@ -19186,7 +19186,7 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd27FT_IS_SAME_FIGHTER_CATEGORYEP9lua_State"]
-                pub fn FT_IS_SAME_FIGHTER_CATEGORY(arg1: u64);
+                pub fn FT_IS_SAME_FIGHTER_CATEGORY(arg1: u64) -> bool;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd21FT_LEAVE_NEAR_OTTOTTOEP9lua_State"]
