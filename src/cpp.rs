@@ -2600,6 +2600,10 @@ pub mod root {
                 pub fn change_magic(
                 	arg1: *mut root::app::Fighter
                 );
+				#[link_name = "\u{1}_ZN3app24FighterSpecializer_Trail24get_special_s_target_posEj"]
+                pub fn get_special_s_target_pos(
+                	arg1: u32
+                ) -> root::phx::Vector3f;
             }
         }
 
