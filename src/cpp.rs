@@ -7950,6 +7950,14 @@ pub mod root {
 						arg2: libc::c_int,
 					) -> u64;
 				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind32AttackModule__set_down_only_implEPNS_26BattleObjectModuleAccessorEib"]
+					pub fn set_down_only(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: libc::c_int,
+						arg3: bool,
+					) -> u64;
+				}
 			}
 			pub mod FighterCutInManager {
 				#[allow(unused_imports)]
