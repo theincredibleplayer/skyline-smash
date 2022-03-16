@@ -19926,7 +19926,7 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_accel_yEP9lua_State"]
-                pub fn get_accel_y(arg1: u64);
+                pub fn get_accel_y(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_brake_yEP9lua_State"]
@@ -20098,7 +20098,7 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy9get_accelEP9lua_State"]
-                pub fn get_accel(arg1: u64);
+                pub fn get_accel(arg1: u64) -> root::phx::Vector2f;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy9get_speedEP9lua_State"]
