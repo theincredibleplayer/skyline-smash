@@ -18839,6 +18839,10 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd25ATK_SET_SHIELD_SETOFF_MULEP9lua_State"]
                 pub fn ATK_SET_SHIELD_SETOFF_MUL(arg1: u64);
             }
+	 		extern "C" {
+                #[link_name = "\u{1}_ZN3app10sv_animcmd26ATK_SET_SHIELD_SETOFF_MUL2EP9lua_State"]
+                pub fn ATK_SET_SHIELD_SETOFF_MUL2(arg1: u64);
+            }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd30ATK_SET_SHIELD_SETOFF_MUL_arg3EP9lua_State"]
                 pub fn ATK_SET_SHIELD_SETOFF_MUL_arg3(arg1: u64);
