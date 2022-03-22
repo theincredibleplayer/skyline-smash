@@ -15133,6 +15133,10 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind23ComboModule__count_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn count(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> u64;
 				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind39ComboModule__is_enable_combo_input_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn is_enable_combo_input(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> bool;
+				}
 			}
 			pub mod BossManager {
 				#[allow(unused_imports)]
