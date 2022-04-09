@@ -15639,13 +15639,13 @@ pub mod root {
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind42FighterKineticEnergyMotion__get_angle_implEPNS_26FighterKineticEnergyMotionE"]
 					pub fn get_angle(arg1: *mut root::app::FighterKineticEnergyMotion)
-						-> u64;
+						-> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind48FighterKineticEnergyMotion__get_angle_whole_implEPNS_26FighterKineticEnergyMotionE"]
 					pub fn get_angle_whole(
 						arg1: *mut root::app::FighterKineticEnergyMotion,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind46FighterKineticEnergyMotion__get_chara_dir_implEPNS_26FighterKineticEnergyMotionE"]
