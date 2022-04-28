@@ -8121,6 +8121,24 @@ pub mod root {
 					) -> u64;
 				}
 				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind49FighterControlModuleImpl__get_attack_s3_turn_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn get_attack_s3_turn(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+					) -> u64;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind49FighterControlModuleImpl__get_attack_s4_turn_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn get_attack_s4_turn(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+					) -> u64;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind49FighterControlModuleImpl__get_special_s_turn_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn get_special_s_turn(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+					) -> u64;
+				}
+				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind53FighterControlModuleImpl__update_attack_air_kind_implEPNS_26BattleObjectModuleAccessorEb"]
 					pub fn update_attack_air_kind(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
