@@ -62,9 +62,9 @@ pub struct CppHash40Map<T: Sized> {
 
 impl<T: Sized> CppHash40Map<T> {
     pub fn get<'a>(&'a self, key: &phx::Hash40) -> Option<&'a T> {
-        let bucket_idx = key.hash % self.bucket_count;
         if !self.buckets.is_null() {
             unsafe {
+                let bucket_idx = key.hash % self.bucket_count;
                 let mut current = *self.buckets.add(bucket_idx as usize);
                 if !current.is_null() {
                     current = (*current).next;
