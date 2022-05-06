@@ -6824,6 +6824,12 @@ pub mod root {
 					) -> i32;
 				}
 				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind33AttackModule__reset_safe_pos_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn reset_safe_pos(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor
+					);
+				}
+				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind35AttackModule__set_reaction_add_implEPNS_26BattleObjectModuleAccessorEiib"]
 					pub fn set_reaction_add(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
