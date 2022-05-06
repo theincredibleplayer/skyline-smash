@@ -5238,7 +5238,7 @@ pub mod root {
 					pub fn get_rhombus(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: bool,
-					) -> f32;
+					) -> *const root::phx::Vector4f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind33GroundModule__modify_rhombus_implEPNS_26BattleObjectModuleAccessorEfff"]
