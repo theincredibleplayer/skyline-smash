@@ -6663,6 +6663,14 @@ pub mod root {
 					) -> bool;
 				}
 				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind43AttackModule__set_ignore_ground_shield_implEPNS_26BattleObjectModuleAccessorEib"]
+					pub fn set_ignore_ground_shield(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: libc::c_int,
+						arg3: bool,
+					);
+				}
+				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind29AttackModule__is_hit_abs_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn is_hit_abs(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> bool;
 				}
