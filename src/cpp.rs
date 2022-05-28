@@ -7972,6 +7972,12 @@ pub mod root {
 						arg3: bool,
 					) -> u64;
 				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind47AttackModule__resume_catch_absolute_damage_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn resume_catch_absolute_damage(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor
+					);
+				}
 			}
 			pub mod FighterCutInManager {
 				#[allow(unused_imports)]
