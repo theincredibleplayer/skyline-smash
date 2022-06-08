@@ -11571,7 +11571,7 @@ pub mod root {
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind35BattleObjectWorld__gravity_pos_implEPNS_17BattleObjectWorldE"]
-					pub fn gravity_pos(arg1: *mut root::app::BattleObjectWorld) -> u64;
+					pub fn gravity_pos(arg1: *mut root::app::BattleObjectWorld) -> root::app::Vector3f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind41BattleObjectWorld__is_gravity_normal_implEPNS_17BattleObjectWorldE"]
