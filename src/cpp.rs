@@ -2256,12 +2256,14 @@ pub mod root {
         pub mod FighterSpecializer_Reflet {
             #[allow(unused_imports)]
             use super::super::super::root;
-			#[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15throwaway_swordERNS_7FighterERN3phx8Vector2fEb"]
-			pub fn throwaway_sword(
-				arg1: *mut root::app::Fighter,
-				arg2: root::phx::Vector2f,
-				arg3: bool
-			);
+			extern "C" {
+				#[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15throwaway_swordERNS_7FighterERN3phx8Vector2fEb"]
+				pub fn throwaway_sword(
+					arg1: *mut root::app::Fighter,
+					arg2: root::phx::Vector2f,
+					arg3: bool
+				);
+            }
 
         }
 
