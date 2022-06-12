@@ -19954,6 +19954,17 @@ pub mod root {
 			}
 		}
 
+        pub mod sv_ground_collision_line {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app24sv_ground_collision_line8is_floorEPKNS_19GroundCollisionLineE"]
+                pub fn is_floor(
+					arg1: root::app::GroundCollisionLine
+				) -> bool;
+            }
+		}
+
 		pub mod sv_information {
 			#[allow(unused_imports)]
 			use super::super::super::root;
