@@ -19960,7 +19960,7 @@ pub mod root {
             extern "C" {
                 #[link_name = "\u{1}_ZN3app24sv_ground_collision_line8is_floorEPKNS_19GroundCollisionLineE"]
                 pub fn is_floor(
-					arg1: root::app::GroundCollisionLine
+					arg1: *mut root::app::GroundCollisionLine
 				) -> bool;
             }
 		}
