@@ -2583,6 +2583,13 @@ pub mod root {
                 	status: i32
                 ) -> bool;
             }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel33set_interpolate_move_attack_jointERNS_7FighterEb"]
+                pub fn set_interpolate_move_attack_joint(
+                	fighter: *mut root::app::Fighter,
+                	arg2: bool
+                );
+            }
         }
 
         pub mod FighterSpecializer_Edge {
