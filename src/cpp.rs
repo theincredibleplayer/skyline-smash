@@ -10688,6 +10688,13 @@ pub mod root {
 					);
 				}
 				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind53WorkModule__unable_transition_term_forbid_indivi_implEPNS_26BattleObjectModuleAccessorEi"]
+					pub fn enable_transition_term_forbid_indivi(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: libc::c_int,
+					);
+				}
+				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind46WorkModule__unable_transition_term_forbid_implEPNS_26BattleObjectModuleAccessorEi"]
 					pub fn unable_transition_term_forbid(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
