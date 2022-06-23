@@ -10185,6 +10185,13 @@ pub mod root {
 					);
 				}
 				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind39MotionModule__set_part_animcmd_fix_implEPNS_26BattleObjectModuleAccessorEb"]
+					pub fn set_part_animcmd_fix(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: bool,
+					);
+				}
+				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind48MotionModule__is_flag_start_1_frame_partial_implEPNS_26BattleObjectModuleAccessorEi"]
 					pub fn is_flag_start_1_frame_partial(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
