@@ -2583,34 +2583,6 @@ pub mod root {
                 	status: i32
                 ) -> bool;
             }
-			extern "C" {
-                #[link_name = "\u{1}_ZN3app23FighterSpecializer_Edge28clear_special_hi_jostle_areaERNS_26BattleObjectModuleAccessorE"]
-                pub fn clear_special_hi_jostle_area(
-                	module_accessor: *mut root::app::BattleObjectModuleAccessor
-                );
-            }
-			extern "C" {
-                #[link_name = "\u{1}_ZN3app23FighterSpecializer_Edge30set_pierce_effect_attack_air_fERNS_26BattleObjectModuleAccessorE"]
-                pub fn set_pierce_effect_attack_air_f(
-                	module_accessor: *mut root::app::BattleObjectModuleAccessor
-                );
-            }
-			extern "C" {
-                #[link_name = "\u{1}_ZN3app23FighterSpecializer_Edge26set_special_hi_jostle_areaERNS_26BattleObjectModuleAccessorE"]
-                pub fn set_special_hi_jostle_area(
-                	module_accessor: *mut root::app::BattleObjectModuleAccessor
-                );
-            }
-			extern "C" {
-				#[link_name = "\u{1}_ZN3app23FighterSpecializer_Edge18set_vec_target_posERNS_26BattleObjectModuleAccessorEiN3phx6Hash40ERKNS3_8Vector2fEj"]
-				pub fn set_vec_target_pos(
-					module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					arg2: libc::c_int,
-					arg3: root::phx::Hash40,
-					arg4: *const root::phx::Vector2f,
-					arg5: libc::c_uint,
-				);
-            }
         }
 
         pub mod FighterSpecializer_Edge {
