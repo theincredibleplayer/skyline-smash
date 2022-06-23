@@ -10185,6 +10185,15 @@ pub mod root {
 					);
 				}
 				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind58MotionModule__set_frame_partial_sync_anim_cmd_revised_implEPNS_26BattleObjectModuleAccessorEifb"]
+					pub fn set_frame_partial_sync_anim_cmd_revised(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: libc::c_int,
+						arg3: f32,
+						arg4: bool,
+					);
+				}
+				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind39MotionModule__set_part_animcmd_fix_implEPNS_26BattleObjectModuleAccessorEb"]
 					pub fn set_part_animcmd_fix(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
