@@ -608,14 +608,6 @@ pub mod root {
         pub struct LinkEventThrow {
             pub _address: u8,
         }
-		pub mod LinkEventThrow {
-			#[allow(unused_imports)]
-			use super::super::super::super::root;
-			extern "C" {
-				#[link_name = "\u{1}_ZN3app14LinkEventThrow13new_l2c_tableEv"]
-				pub fn new_l2c_table() -> root::lib::L2CValue;
-			}
-		}
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
         pub struct FighterKineticEnergyGravity {
