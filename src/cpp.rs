@@ -14249,7 +14249,7 @@ pub mod root {
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind31LinkEvent__store_l2c_table_implEPKNS_9LinkEventE"]
-					pub fn store_l2c_table(arg1: *const root::app::LinkEvent) -> L2CValue;
+					pub fn store_l2c_table(arg1: *const root::app::LinkEvent) -> root::lib::L2CValue;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind31LinkEvent__store_l2c_table_implEPKNS_9LinkEventERKN3lib8L2CValueE"]
