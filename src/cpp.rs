@@ -2253,6 +2253,27 @@ pub mod root {
 
         }
 
+		pub mod FighterSpecializer_Reflet {
+			#[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_hud_kindERNS_7FighterEi"]
+                pub fn change_hud_kind(
+                    arg1: *mut root::app::Fighter,
+					arg2: i32,
+                ) -> u64;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet17set_flag_to_tableERNS_21FighterModuleAccessorEibi"]
+                pub fn set_flag_to_table(
+                    arg1: *mut root::app::Fighter,
+					arg2: i32,
+					arg3: bool,
+					arg4: i32,
+                ) -> u64;
+            }
+		}
+
         pub mod FighterSpecializer_Inkling {
             #[allow(unused_imports)]
             use super::super::super::root;
