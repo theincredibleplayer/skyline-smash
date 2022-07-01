@@ -2274,10 +2274,17 @@ pub mod root {
 			extern "C" {
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet17set_flag_to_tableERNS_21FighterModuleAccessorEibi"]
                 pub fn set_flag_to_table(
-                    arg1: *mut root::app::Fighter,
+                    arg1: *mut root::app::FighterModuleAccessor,
 					arg2: i32,
 					arg3: bool,
 					arg4: i32,
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_grimoireERNS_21FighterModuleAccessorEi"]
+                pub fn change_grimoire(
+                    arg1: *mut root::app::FighterModuleAccessor,
+					arg2: i32,
                 );
             }
 
