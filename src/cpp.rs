@@ -2253,26 +2253,19 @@ pub mod root {
 
         }
 
-		pub mod FighterSpecializer_Reflet {
-			#[allow(unused_imports)]
+        pub mod FighterSpecializer_Reflet {
+            #[allow(unused_imports)]
             use super::super::super::root;
-            extern "C" {
-                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_hud_kindERNS_7FighterEi"]
-                pub fn change_hud_kind(
-                    arg1: *mut root::app::Fighter,
-					arg2: i32,
-                ) -> u64;
-            }
 			extern "C" {
-                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet17set_flag_to_tableERNS_21FighterModuleAccessorEibi"]
-                pub fn set_flag_to_table(
-                    arg1: *mut root::app::Fighter,
-					arg2: i32,
-					arg3: bool,
-					arg4: i32,
-                ) -> u64;
+				#[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15throwaway_swordERNS_7FighterERN3phx8Vector2fEb"]
+				pub fn throwaway_sword(
+					arg1: *mut root::app::Fighter,
+					arg2: root::phx::Vector2f,
+					arg3: bool
+				);
             }
-		}
+
+        }
 
         pub mod FighterSpecializer_Inkling {
             #[allow(unused_imports)]
@@ -2578,6 +2571,63 @@ pub mod root {
                     arg2: f32,
                     arg3: bool,
                 ) -> u64;
+            }
+        }
+
+        pub mod FighterSpecializer_Pickel {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel21is_status_kind_attackEi"]
+                pub fn is_status_kind_attack(
+                	status: i32
+                ) -> bool;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel33set_interpolate_move_attack_jointERNS_7FighterEb"]
+                pub fn set_interpolate_move_attack_joint(
+                	fighter: *mut root::app::Fighter,
+                	arg2: bool
+                );
+            }
+        }
+
+        pub mod FighterSpecializer_Edge {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app23FighterSpecializer_Edge20attack_lw4_ray_checkERNS_26BattleObjectModuleAccessorE"]
+                pub fn attack_lw4_ray_check(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app23FighterSpecializer_Edge28clear_special_hi_jostle_areaERNS_26BattleObjectModuleAccessorE"]
+                pub fn clear_special_hi_jostle_area(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app23FighterSpecializer_Edge30set_pierce_effect_attack_air_fERNS_26BattleObjectModuleAccessorE"]
+                pub fn set_pierce_effect_attack_air_f(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app23FighterSpecializer_Edge26set_special_hi_jostle_areaERNS_26BattleObjectModuleAccessorE"]
+                pub fn set_special_hi_jostle_area(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+			extern "C" {
+				#[link_name = "\u{1}_ZN3app23FighterSpecializer_Edge18set_vec_target_posERNS_26BattleObjectModuleAccessorEiN3phx6Hash40ERKNS3_8Vector2fEj"]
+				pub fn set_vec_target_pos(
+					module_accessor: *mut root::app::BattleObjectModuleAccessor,
+					arg2: libc::c_int,
+					arg3: root::phx::Hash40,
+					arg4: *const root::phx::Vector2f,
+					arg5: libc::c_uint,
+				);
             }
         }
 
@@ -5259,7 +5309,7 @@ pub mod root {
 					pub fn get_rhombus(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: bool,
-					) -> f32;
+					) -> *const root::phx::Vector4f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind33GroundModule__modify_rhombus_implEPNS_26BattleObjectModuleAccessorEfff"]
@@ -6684,6 +6734,14 @@ pub mod root {
 					) -> bool;
 				}
 				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind43AttackModule__set_ignore_ground_shield_implEPNS_26BattleObjectModuleAccessorEib"]
+					pub fn set_ignore_ground_shield(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: libc::c_int,
+						arg3: bool,
+					);
+				}
+				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind29AttackModule__is_hit_abs_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn is_hit_abs(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> bool;
 				}
@@ -6843,6 +6901,12 @@ pub mod root {
 						arg2: libc::c_int,
 						arg3: bool,
 					) -> i32;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind33AttackModule__reset_safe_pos_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn reset_safe_pos(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor
+					);
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind35AttackModule__set_reaction_add_implEPNS_26BattleObjectModuleAccessorEiib"]
@@ -7979,6 +8043,12 @@ pub mod root {
 						arg3: bool,
 					) -> u64;
 				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind47AttackModule__resume_catch_absolute_damage_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn resume_catch_absolute_damage(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor
+					);
+				}
 			}
 			pub mod FighterCutInManager {
 				#[allow(unused_imports)]
@@ -8138,6 +8208,24 @@ pub mod root {
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind55FighterControlModuleImpl__reserve_on_attack_button_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn reserve_on_attack_button(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+					) -> u64;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind49FighterControlModuleImpl__get_attack_s3_turn_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn get_attack_s3_turn(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+					) -> u64;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind49FighterControlModuleImpl__get_attack_s4_turn_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn get_attack_s4_turn(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+					) -> u64;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind49FighterControlModuleImpl__get_special_s_turn_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn get_special_s_turn(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 					) -> u64;
 				}
@@ -10097,6 +10185,22 @@ pub mod root {
 					);
 				}
 				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind58MotionModule__set_frame_partial_sync_anim_cmd_revised_implEPNS_26BattleObjectModuleAccessorEifb"]
+					pub fn set_frame_partial_sync_anim_cmd_revised(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: libc::c_int,
+						arg3: f32,
+						arg4: bool,
+					);
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind39MotionModule__set_part_animcmd_fix_implEPNS_26BattleObjectModuleAccessorEb"]
+					pub fn set_part_animcmd_fix(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: bool,
+					);
+				}
+				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind48MotionModule__is_flag_start_1_frame_partial_implEPNS_26BattleObjectModuleAccessorEi"]
 					pub fn is_flag_start_1_frame_partial(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
@@ -10584,8 +10688,22 @@ pub mod root {
 					);
 				}
 				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind53WorkModule__enable_transition_term_forbid_indivi_implEPNS_26BattleObjectModuleAccessorEi"]
+					pub fn enable_transition_term_forbid_indivi(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: libc::c_int,
+					);
+				}
+				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind46WorkModule__unable_transition_term_forbid_implEPNS_26BattleObjectModuleAccessorEi"]
 					pub fn unable_transition_term_forbid(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: libc::c_int,
+					);
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind53WorkModule__unable_transition_term_forbid_indivi_implEPNS_26BattleObjectModuleAccessorEi"]
+					pub fn unable_transition_term_forbid_indivi(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_int,
 					);
@@ -11540,7 +11658,7 @@ pub mod root {
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind35BattleObjectWorld__gravity_pos_implEPNS_17BattleObjectWorldE"]
-					pub fn gravity_pos(arg1: *mut root::app::BattleObjectWorld) -> u64;
+					pub fn gravity_pos(arg1: *mut root::app::BattleObjectWorld) -> root::phx::Vector3f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind41BattleObjectWorld__is_gravity_normal_implEPNS_17BattleObjectWorldE"]
@@ -14131,7 +14249,7 @@ pub mod root {
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind31LinkEvent__store_l2c_table_implEPKNS_9LinkEventE"]
-					pub fn store_l2c_table(arg1: *const root::app::LinkEvent) -> u64;
+					pub fn store_l2c_table(arg1: *const root::app::LinkEvent) -> root::lib::L2CValue;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind31LinkEvent__store_l2c_table_implEPKNS_9LinkEventERKN3lib8L2CValueE"]
@@ -15154,6 +15272,10 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind23ComboModule__count_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn count(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> u64;
 				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind39ComboModule__is_enable_combo_input_implEPNS_26BattleObjectModuleAccessorE"]
+					pub fn is_enable_combo_input(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> bool;
+				}
 			}
 			pub mod BossManager {
 				#[allow(unused_imports)]
@@ -15656,13 +15778,13 @@ pub mod root {
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind42FighterKineticEnergyMotion__get_angle_implEPNS_26FighterKineticEnergyMotionE"]
 					pub fn get_angle(arg1: *mut root::app::FighterKineticEnergyMotion)
-						-> u64;
+						-> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind48FighterKineticEnergyMotion__get_angle_whole_implEPNS_26FighterKineticEnergyMotionE"]
 					pub fn get_angle_whole(
 						arg1: *mut root::app::FighterKineticEnergyMotion,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind46FighterKineticEnergyMotion__get_chara_dir_implEPNS_26FighterKineticEnergyMotionE"]
@@ -18860,6 +18982,10 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd25ATK_SET_SHIELD_SETOFF_MULEP9lua_State"]
                 pub fn ATK_SET_SHIELD_SETOFF_MUL(arg1: u64);
             }
+	 		extern "C" {
+                #[link_name = "\u{1}_ZN3app10sv_animcmd26ATK_SET_SHIELD_SETOFF_MUL2EP9lua_State"]
+                pub fn ATK_SET_SHIELD_SETOFF_MUL2(arg1: u64);
+            }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd30ATK_SET_SHIELD_SETOFF_MUL_arg3EP9lua_State"]
                 pub fn ATK_SET_SHIELD_SETOFF_MUL_arg3(arg1: u64);
@@ -18874,7 +19000,6 @@ pub mod root {
             }
             extern "C" {
 				#[link_name = "\u{1}_ZN3app10sv_animcmd6ATTACKEP9lua_State"]
-				#[unwind(allowed)]
                 pub fn ATTACK(arg1: u64);
             }
             extern "C" {
@@ -19734,6 +19859,18 @@ pub mod root {
                 pub fn entry_id(arg1: root::uint) -> libc::c_int;
             }
 		}
+		
+        pub mod sv_camera_manager {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app17sv_camera_manager10dead_rangeEP9lua_State"]
+                pub fn dead_range(
+					arg1: u64
+				) -> bool;
+            }
+		}
+
 		pub mod sv_fighter_util {
 			#[allow(unused_imports)]
 			use super::super::super::root;
@@ -19914,6 +20051,17 @@ pub mod root {
 					lua_state: u64
 				) -> bool;
 			}
+		}
+
+        pub mod sv_ground_collision_line {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app24sv_ground_collision_line8is_floorEPKNS_19GroundCollisionLineE"]
+                pub fn is_floor(
+					arg1: *mut root::app::GroundCollisionLine
+				) -> bool;
+            }
 		}
 
 		pub mod sv_information {
