@@ -2253,6 +2253,60 @@ pub mod root {
 
         }
 
+        pub mod FighterSpecializer_Lucario {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario13effect_resumeERNS_26BattleObjectModuleAccessorE"]
+                pub fn effect_resume(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario14effect_suspendERNS_26BattleObjectModuleAccessorE"]
+                pub fn effect_suspend(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario15req_aura_effectERNS_7FighterEN3phx6Hash40ES4_fffffffb"]
+                pub fn req_aura_effect(
+                    arg1: *mut root::app::Fighter,
+					arg2: root::phx::Hash40,
+					arg3: root::phx::Hash40,
+					arg4: f32,
+					arg5: f32,
+					arg6: f32,
+					arg7: f32,
+					arg8: f32,
+					arg9: f32,
+					arg10: f32,
+					arg11: bool
+                ) -> u64;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario20req_aura_effect_bothERNS_7FighterE"]
+                pub fn req_aura_effect_both(
+                    arg1: *mut root::app::Fighter
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario21save_aura_ball_statusERNS_26BattleObjectModuleAccessorEbi"]
+                pub fn save_aura_ball_status(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+					arg2: bool,
+					arg3: i32
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario17set_mach_validityERNS_26BattleObjectModuleAccessorEb"]
+                pub fn set_mach_validity(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+					arg2: bool
+                );
+            }
+        }
+
         pub mod FighterSpecializer_Reflet {
             #[allow(unused_imports)]
             use super::super::super::root;
