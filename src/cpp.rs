@@ -8998,7 +8998,7 @@ pub mod root {
 					pub fn get_article(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_int,
-					) -> i32;
+					) -> *mut root::app::Article;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind33ArticleModule__get_joint_pos_implEPNS_26BattleObjectModuleAccessorEiN3phx6Hash40ENS_22ArticleOperationTargetE"]
