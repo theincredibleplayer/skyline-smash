@@ -2667,6 +2667,22 @@ pub mod root {
                 	arg2: bool
                 );
             }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel16add_material_numERNS_26BattleObjectModuleAccessorEii"]
+                pub fn add_material_num(
+                	fighter: *mut root::app::BattleObjectModuleAccessor,
+                	material_kind: i32,
+					amount: i32
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel16sub_material_numERNS_26BattleObjectModuleAccessorEii"]
+                pub fn sub_material_num(
+                	fighter: *mut root::app::BattleObjectModuleAccessor,
+                	material_kind: i32,
+					amount: i32
+                );
+            }
         }
 
         pub mod FighterSpecializer_Edge {
