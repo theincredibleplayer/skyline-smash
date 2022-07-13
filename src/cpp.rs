@@ -2696,7 +2696,7 @@ pub mod root {
             }
 			extern "C" {
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel28remove_have_craft_weapon_allERNS_26BattleObjectModuleAccessorE"]
-                pub fn is_have_tool(
+                pub fn remove_have_craft_weapon_all(
                 	module_accessor: *mut root::app::BattleObjectModuleAccessor
                 );
             }
