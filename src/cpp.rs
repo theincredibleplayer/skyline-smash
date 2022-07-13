@@ -2701,6 +2701,12 @@ pub mod root {
                 );
             }
 			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel28remove_have_craft_weapon_allERNS_26BattleObjectModuleAccessorE"]
+                pub fn remove_have_craft_weapon_all(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+			extern "C" {
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel22set_craft_weapon_paramERNS_7FighterENS_28FighterPickelCraftWeaponKindENS_25FighterPickelMaterialKindEf"]
                 pub fn set_craft_weapon_param(
                 	fighter: *mut root::app::Fighter,
