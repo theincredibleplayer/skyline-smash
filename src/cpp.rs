@@ -804,6 +804,12 @@ pub mod root {
         pub struct FighterRyuLinkEventFinalDeadDamage {
             pub _address: u8,
         }
+		#[repr(transparent)]
+        #[derive(Debug, Copy, Clone)]
+        pub struct FighterPickelMaterialKind(pub i32);
+		#[repr(transparent)]
+        #[derive(Debug, Copy, Clone)]
+        pub struct FighterPickelCraftWeaponKind(pub i32);
         #[repr(transparent)]
         #[derive(Debug, Copy, Clone)]
         pub struct ItemCommonParamFloat(f32);
@@ -2654,11 +2660,62 @@ pub mod root {
         pub mod FighterSpecializer_Pickel {
             #[allow(unused_imports)]
             use super::super::super::root;
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel16add_material_numERNS_26BattleObjectModuleAccessorEii"]
+                pub fn add_material_num(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                	material_kind: i32,
+					amount: i32
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel27get_craft_weapon_durabilityERNS_7FighterENS_28FighterPickelCraftWeaponKindE"]
+                pub fn get_craft_weapon_durability(
+                	fighter: *mut root::app::Fighter,
+                	craft_weapon_kind: root::app::FighterPickelCraftWeaponKind
+                ) -> i32;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel30get_craft_weapon_material_kindERNS_7FighterENS_28FighterPickelCraftWeaponKindE"]
+                pub fn get_craft_weapon_material_kind(
+                	fighter: *mut root::app::Fighter,
+                	craft_weapon_kind: root::app::FighterPickelCraftWeaponKind
+                ) -> i32;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel12is_have_toolERKNS_26BattleObjectModuleAccessorE"]
+                pub fn is_have_tool(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel21is_status_kind_attackEi"]
                 pub fn is_status_kind_attack(
                 	status: i32
                 ) -> bool;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel28remove_have_craft_weapon_allERNS_26BattleObjectModuleAccessorE"]
+                pub fn is_have_tool(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel22set_craft_weapon_paramERNS_7FighterENS_28FighterPickelCraftWeaponKindENS_25FighterPickelMaterialKindEf"]
+                pub fn set_craft_weapon_param(
+                	fighter: *mut root::app::Fighter,
+                	craft_weapon_kind: root::app::FighterPickelCraftWeaponKind,
+                	material_kind: root::app::FighterPickelMaterialKind,
+            		arg4: f32
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel21set_have_craft_weaponERNS_7FighterENS_28FighterPickelCraftWeaponKindEb"]
+                pub fn set_have_craft_weapon(
+                	fighter: *mut root::app::Fighter,
+                	craft_weapon_kind: root::app::FighterPickelCraftWeaponKind,
+            		arg3: bool
+                );
             }
 			extern "C" {
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel33set_interpolate_move_attack_jointERNS_7FighterEb"]
@@ -2668,17 +2725,17 @@ pub mod root {
                 );
             }
 			extern "C" {
-                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel16add_material_numERNS_26BattleObjectModuleAccessorEii"]
-                pub fn add_material_num(
-                	fighter: *mut root::app::BattleObjectModuleAccessor,
-                	material_kind: i32,
-					amount: i32
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel27sub_craft_weapon_durabilityERNS_7FighterENS_28FighterPickelCraftWeaponKindEf"]
+                pub fn sub_craft_weapon_durability(
+                	fighter: *mut root::app::Fighter,
+                	craft_weapon_kind: root::app::FighterPickelCraftWeaponKind,
+            		arg3: f32
                 );
             }
 			extern "C" {
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel16sub_material_numERNS_26BattleObjectModuleAccessorEii"]
                 pub fn sub_material_num(
-                	fighter: *mut root::app::BattleObjectModuleAccessor,
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor,
                 	material_kind: i32,
 					amount: i32
                 );
