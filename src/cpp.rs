@@ -2740,6 +2740,36 @@ pub mod root {
 					amount: i32
                 );
             }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel37check_material_attack_air_lw_generateERKNS_26BattleObjectModuleAccessorE"]
+                pub fn check_material_attack_air_lw_generate(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel44check_material_special_hi_generate_fireworksERKNS_26BattleObjectModuleAccessorE"]
+                pub fn check_material_special_hi_generate_fireworks(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel39check_material_special_lw_generate_bombERKNS_26BattleObjectModuleAccessorE"]
+                pub fn check_material_special_lw_generate_bomb(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel40check_material_special_lw_generate_stoneERKNS_26BattleObjectModuleAccessorE"]
+                pub fn check_material_special_lw_generate_stone(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel41check_material_special_s_generate_trolleyERKNS_26BattleObjectModuleAccessorE"]
+                pub fn check_material_special_s_generate_trolley(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
         }
 
         pub mod FighterSpecializer_Edge {
