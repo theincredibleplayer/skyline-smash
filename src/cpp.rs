@@ -1277,11 +1277,11 @@ pub mod root {
 			extern "C" {
 				#[link_name = "\u{1}_ZN3app13GroundUtility15check_dead_areaERKN3phx8Vector3fE"]
 				pub fn check_dead_area(
-					arg: root::phx::Vector3f
+					arg: *const root::phx::Vector3f
 				) -> i32;
 				#[link_name = "\u{1}_ZN3app13GroundUtility16check_dead_area2ERKN3phx8Vector3fEff"]
 				pub fn check_dead_area2(
-					arg1: root::phx::Vector3f,
+					arg1: *const root::phx::Vector3f,
 					arg2: f32,
 					arg3: f32
 				) -> i32;
@@ -1289,7 +1289,7 @@ pub mod root {
 				pub fn check_ignore_geometry_move_power_stage() -> i32;
 				#[link_name = "\u{1}_ZN3app13GroundUtility18get_degree_gravityERKN3phx8Vector3fEf"]
 				pub fn get_degree_gravity(
-					arg1: root::phx::Vector3f,
+					arg1: *const root::phx::Vector3f,
 					arg2: f32
 				) -> f32;
 			}
