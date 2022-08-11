@@ -8444,7 +8444,7 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind54FighterControlModuleImpl__get_param_dash_s4_frame_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn get_param_dash_s4_frame(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind59FighterControlModuleImpl__get_param_attack_hi4_flick_y_implEPNS_26BattleObjectModuleAccessorE"]
