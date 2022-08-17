@@ -20301,9 +20301,13 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_accel_yEP9lua_State"]
                 pub fn get_accel_y(arg1: u64) -> f32;
             }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_brake_xEP9lua_State"]
+                pub fn get_brake_x(arg1: u64) -> f32;
+            }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_brake_yEP9lua_State"]
-                pub fn get_brake_y(arg1: u64);
+                pub fn get_brake_y(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_speed3fEP9lua_State"]
