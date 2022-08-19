@@ -4260,7 +4260,7 @@ pub mod root {
 					pub fn reaction(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_int,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind28DamageModule__power_max_implEPNS_26BattleObjectModuleAccessorEi"]
