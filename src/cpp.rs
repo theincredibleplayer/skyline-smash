@@ -10812,13 +10812,13 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind30SlopeModule__floor_diff_l_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn floor_diff_l(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind30SlopeModule__floor_diff_r_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn floor_diff_r(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> f32;
 				}
 			}
 			pub mod StopModule {
