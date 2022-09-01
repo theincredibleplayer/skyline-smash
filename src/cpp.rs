@@ -15556,7 +15556,7 @@ pub mod root {
 					/// let hp_max_2 = hit_point_max(FighterInformation, true); // Returns 150
 					/// ```
 					#[link_name = "\u{1}_ZN3app8lua_bind38FighterInformation__hit_point_max_implEPNS_18FighterInformationEb"]
-					pub fn hit_point_max(arg1: *mut smash::app::FighterInformation, arg2: bool) -> f32;
+					pub fn hit_point_max(arg1: *mut root::app::FighterInformation, arg2: bool) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind38FighterInformation__fighter_color_implEPNS_18FighterInformationE"]
