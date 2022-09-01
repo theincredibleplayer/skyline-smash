@@ -15537,7 +15537,26 @@ pub mod root {
 				use super::super::super::super::root;
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind34FighterInformation__hit_point_implEPNS_18FighterInformationE"]
-					pub fn hit_point(arg1: *mut root::app::FighterInformation) -> u64;
+					pub fn hit_point(arg1: *mut root::app::FighterInformation) -> f32;
+				}
+				extern "C" {
+					/// In stamina mode, returns the max stamina each fighter starts with, which is set in the ruleset
+					///
+					/// # Arguments
+					///
+					/// * `FighterInformation` - Pointer to FighterInformation
+					///
+					/// * 'bool' - As a result of testing, regardless of whether it is set to true or false, it still returns the max stamina value
+					///
+					/// # Example
+					///
+					/// ```
+					/// // Ruleset has stamina set to 150
+					/// let hp_max_1 = hit_point_max(FighterInformation, false); // Returns 150
+					/// let hp_max_2 = hit_point_max(FighterInformation, true); // Returns 150
+					/// ```
+					#[link_name = "\u{1}_ZN3app8lua_bind38FighterInformation__hit_point_max_implEPNS_18FighterInformationEb"]
+					pub fn hit_point_max(arg1: *mut root::app::FighterInformation, arg2: bool) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind38FighterInformation__fighter_color_implEPNS_18FighterInformationE"]
