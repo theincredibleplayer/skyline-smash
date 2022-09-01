@@ -15537,7 +15537,7 @@ pub mod root {
 				use super::super::super::super::root;
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind34FighterInformation__hit_point_implEPNS_18FighterInformationE"]
-					pub fn hit_point(arg1: *mut root::app::FighterInformation) -> u64;
+					pub fn hit_point(arg1: *mut root::app::FighterInformation) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind38FighterInformation__fighter_color_implEPNS_18FighterInformationE"]
