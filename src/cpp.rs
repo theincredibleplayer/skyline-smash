@@ -5729,7 +5729,7 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind34GroundModule__can_entry_cliff_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn can_entry_cliff(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> bool;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind39GroundModule__can_entry_cliff_same_implEPNS_26BattleObjectModuleAccessorERN3phx8Vector2fE"]
