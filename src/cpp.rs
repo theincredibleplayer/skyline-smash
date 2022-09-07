@@ -5982,14 +5982,14 @@ pub mod root {
 					pub fn get_touch_normal_x(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_uint,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind37GroundModule__get_touch_normal_y_implEPNS_26BattleObjectModuleAccessorEj"]
 					pub fn get_touch_normal_y(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_uint,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind52GroundModule__get_touch_normal_consider_gravity_implEPNS_26BattleObjectModuleAccessorEj"]
@@ -6057,7 +6057,7 @@ pub mod root {
 					pub fn get_touch_pos(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_uint,
-					) -> u64;
+					) -> root::phx::Vector2f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind27GroundModule__is_touch_implEPNS_26BattleObjectModuleAccessorEj"]
