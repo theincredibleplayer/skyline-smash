@@ -20414,7 +20414,7 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy16get_speed_lengthEP9lua_State"]
-                pub fn get_speed_length(arg1: u64);
+                pub fn get_speed_length(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy16set_damage_speedEP9lua_State"]
