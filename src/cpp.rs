@@ -6057,7 +6057,7 @@ pub mod root {
 					pub fn get_touch_pos(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_uint,
-					) -> root::phx::Vector3f;
+					) -> root::phx::Vector2f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind27GroundModule__is_touch_implEPNS_26BattleObjectModuleAccessorEj"]
