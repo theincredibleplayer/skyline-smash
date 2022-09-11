@@ -804,6 +804,12 @@ pub mod root {
         pub struct FighterRyuLinkEventFinalDeadDamage {
             pub _address: u8,
         }
+		#[repr(transparent)]
+        #[derive(Debug, Copy, Clone)]
+        pub struct FighterPickelMaterialKind(pub i32);
+		#[repr(transparent)]
+        #[derive(Debug, Copy, Clone)]
+        pub struct FighterPickelCraftWeaponKind(pub i32);
         #[repr(transparent)]
         #[derive(Debug, Copy, Clone)]
         pub struct ItemCommonParamFloat(f32);
@@ -1262,6 +1268,30 @@ pub mod root {
 			extern "C" {
 				#[link_name = "\u{1}_ZN3app5stage12get_stage_idEv"]
 				pub fn get_stage_id() -> i32;
+			}
+		}
+
+		pub mod GroundUtility {
+			#[allow(unused_imports)]
+			use super::super::super::root;
+			extern "C" {
+				#[link_name = "\u{1}_ZN3app13GroundUtility15check_dead_areaERKN3phx8Vector3fE"]
+				pub fn check_dead_area(
+					arg: *const root::phx::Vector3f
+				) -> i32;
+				#[link_name = "\u{1}_ZN3app13GroundUtility16check_dead_area2ERKN3phx8Vector3fEff"]
+				pub fn check_dead_area2(
+					arg1: *const root::phx::Vector3f,
+					arg2: f32,
+					arg3: f32
+				) -> i32;
+				#[link_name = "\u{1}_ZN3app13GroundUtility38check_ignore_geometry_move_power_stageEv"]
+				pub fn check_ignore_geometry_move_power_stage() -> i32;
+				#[link_name = "\u{1}_ZN3app13GroundUtility18get_degree_gravityERKN3phx8Vector3fEf"]
+				pub fn get_degree_gravity(
+					arg1: *const root::phx::Vector3f,
+					arg2: f32
+				) -> f32;
 			}
 		}
 
@@ -2253,6 +2283,60 @@ pub mod root {
 
         }
 
+        pub mod FighterSpecializer_Lucario {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario13effect_resumeERNS_26BattleObjectModuleAccessorE"]
+                pub fn effect_resume(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario14effect_suspendERNS_26BattleObjectModuleAccessorE"]
+                pub fn effect_suspend(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario15req_aura_effectERNS_7FighterEN3phx6Hash40ES4_fffffffb"]
+                pub fn req_aura_effect(
+                    arg1: *mut root::app::Fighter,
+					arg2: root::phx::Hash40,
+					arg3: root::phx::Hash40,
+					arg4: f32,
+					arg5: f32,
+					arg6: f32,
+					arg7: f32,
+					arg8: f32,
+					arg9: f32,
+					arg10: f32,
+					arg11: bool
+                ) -> u64;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario20req_aura_effect_bothERNS_7FighterE"]
+                pub fn req_aura_effect_both(
+                    arg1: *mut root::app::Fighter
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario21save_aura_ball_statusERNS_26BattleObjectModuleAccessorEbi"]
+                pub fn save_aura_ball_status(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+					arg2: bool,
+					arg3: i32
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Lucario17set_mach_validityERNS_26BattleObjectModuleAccessorEb"]
+                pub fn set_mach_validity(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+					arg2: bool
+                );
+            }
+        }
+
         pub mod FighterSpecializer_Reflet {
             #[allow(unused_imports)]
             use super::super::super::root;
@@ -2263,6 +2347,29 @@ pub mod root {
 					arg2: root::phx::Vector2f,
 					arg3: bool
 				);
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_hud_kindERNS_7FighterEi"]
+                pub fn change_hud_kind(
+                    arg1: *mut root::app::Fighter,
+					arg2: i32,
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet17set_flag_to_tableERNS_21FighterModuleAccessorEibi"]
+                pub fn set_flag_to_table(
+                    arg1: *mut root::app::FighterModuleAccessor,
+					arg2: i32,
+					arg3: bool,
+					arg4: i32,
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_grimoireERNS_21FighterModuleAccessorEi"]
+                pub fn change_grimoire(
+                    arg1: *mut root::app::FighterModuleAccessor,
+					arg2: i32,
+                );
             }
 
         }
@@ -2577,6 +2684,34 @@ pub mod root {
         pub mod FighterSpecializer_Pickel {
             #[allow(unused_imports)]
             use super::super::super::root;
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel16add_material_numERNS_26BattleObjectModuleAccessorEii"]
+                pub fn add_material_num(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                	material_kind: i32,
+					amount: i32
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel27get_craft_weapon_durabilityERNS_7FighterENS_28FighterPickelCraftWeaponKindE"]
+                pub fn get_craft_weapon_durability(
+                	fighter: *mut root::app::Fighter,
+                	craft_weapon_kind: root::app::FighterPickelCraftWeaponKind
+                ) -> i32;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel30get_craft_weapon_material_kindERNS_7FighterENS_28FighterPickelCraftWeaponKindE"]
+                pub fn get_craft_weapon_material_kind(
+                	fighter: *mut root::app::Fighter,
+                	craft_weapon_kind: root::app::FighterPickelCraftWeaponKind
+                ) -> i32;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel12is_have_toolERKNS_26BattleObjectModuleAccessorE"]
+                pub fn is_have_tool(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel21is_status_kind_attackEi"]
                 pub fn is_status_kind_attack(
@@ -2584,11 +2719,80 @@ pub mod root {
                 ) -> bool;
             }
 			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel28remove_have_craft_weapon_allERNS_26BattleObjectModuleAccessorE"]
+                pub fn remove_have_craft_weapon_all(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel22set_craft_weapon_paramERNS_7FighterENS_28FighterPickelCraftWeaponKindENS_25FighterPickelMaterialKindEf"]
+                pub fn set_craft_weapon_param(
+                	fighter: *mut root::app::Fighter,
+                	craft_weapon_kind: root::app::FighterPickelCraftWeaponKind,
+                	material_kind: root::app::FighterPickelMaterialKind,
+            		arg4: f32
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel21set_have_craft_weaponERNS_7FighterENS_28FighterPickelCraftWeaponKindEb"]
+                pub fn set_have_craft_weapon(
+                	fighter: *mut root::app::Fighter,
+                	craft_weapon_kind: root::app::FighterPickelCraftWeaponKind,
+            		arg3: bool
+                );
+            }
+			extern "C" {
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel33set_interpolate_move_attack_jointERNS_7FighterEb"]
                 pub fn set_interpolate_move_attack_joint(
                 	fighter: *mut root::app::Fighter,
                 	arg2: bool
                 );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel27sub_craft_weapon_durabilityERNS_7FighterENS_28FighterPickelCraftWeaponKindEf"]
+                pub fn sub_craft_weapon_durability(
+                	fighter: *mut root::app::Fighter,
+                	craft_weapon_kind: root::app::FighterPickelCraftWeaponKind,
+            		arg3: f32
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel16sub_material_numERNS_26BattleObjectModuleAccessorEii"]
+                pub fn sub_material_num(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                	material_kind: i32,
+					amount: i32
+                );
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel37check_material_attack_air_lw_generateERKNS_26BattleObjectModuleAccessorE"]
+                pub fn check_material_attack_air_lw_generate(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel44check_material_special_hi_generate_fireworksERKNS_26BattleObjectModuleAccessorE"]
+                pub fn check_material_special_hi_generate_fireworks(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel39check_material_special_lw_generate_bombERKNS_26BattleObjectModuleAccessorE"]
+                pub fn check_material_special_lw_generate_bomb(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel40check_material_special_lw_generate_stoneERKNS_26BattleObjectModuleAccessorE"]
+                pub fn check_material_special_lw_generate_stone(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Pickel41check_material_special_s_generate_trolleyERKNS_26BattleObjectModuleAccessorE"]
+                pub fn check_material_special_s_generate_trolley(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
             }
         }
 
@@ -4056,7 +4260,7 @@ pub mod root {
 					pub fn reaction(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_int,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind28DamageModule__power_max_implEPNS_26BattleObjectModuleAccessorEi"]
@@ -5778,35 +5982,35 @@ pub mod root {
 					pub fn get_touch_normal_x(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_uint,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind37GroundModule__get_touch_normal_y_implEPNS_26BattleObjectModuleAccessorEj"]
 					pub fn get_touch_normal_y(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_uint,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind52GroundModule__get_touch_normal_consider_gravity_implEPNS_26BattleObjectModuleAccessorEj"]
 					pub fn get_touch_normal_consider_gravity(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_uint,
-					) -> u64;
+					) -> root::phx::Vector2f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind54GroundModule__get_touch_normal_x_consider_gravity_implEPNS_26BattleObjectModuleAccessorEj"]
 					pub fn get_touch_normal_x_consider_gravity(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_uint,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind54GroundModule__get_touch_normal_y_consider_gravity_implEPNS_26BattleObjectModuleAccessorEj"]
 					pub fn get_touch_normal_y_consider_gravity(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_uint,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind57GroundModule__get_touch_normal_for_touch_attack_data_implEPNS_26BattleObjectModuleAccessorEj"]
@@ -5853,7 +6057,7 @@ pub mod root {
 					pub fn get_touch_pos(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_uint,
-					) -> u64;
+					) -> root::phx::Vector2f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind27GroundModule__is_touch_implEPNS_26BattleObjectModuleAccessorEj"]
@@ -8240,7 +8444,7 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind54FighterControlModuleImpl__get_param_dash_s4_frame_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn get_param_dash_s4_frame(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind59FighterControlModuleImpl__get_param_attack_hi4_flick_y_implEPNS_26BattleObjectModuleAccessorE"]
@@ -8921,7 +9125,7 @@ pub mod root {
 					pub fn get_article(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
 						arg2: libc::c_int,
-					) -> i32;
+					) -> *mut root::app::Article;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind33ArticleModule__get_joint_pos_implEPNS_26BattleObjectModuleAccessorEiN3phx6Hash40ENS_22ArticleOperationTargetE"]
@@ -15333,7 +15537,26 @@ pub mod root {
 				use super::super::super::super::root;
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind34FighterInformation__hit_point_implEPNS_18FighterInformationE"]
-					pub fn hit_point(arg1: *mut root::app::FighterInformation) -> u64;
+					pub fn hit_point(arg1: *mut root::app::FighterInformation) -> f32;
+				}
+				extern "C" {
+					/// In stamina mode, returns the max stamina each fighter starts with, which is set in the ruleset
+					///
+					/// # Arguments
+					///
+					/// * `FighterInformation` - Pointer to FighterInformation
+					///
+					/// * 'bool' - As a result of testing, regardless of whether it is set to true or false, it still returns the max stamina value
+					///
+					/// # Example
+					///
+					/// ```
+					/// // Ruleset has stamina set to 150
+					/// let hp_max_1 = hit_point_max(FighterInformation, false); // Returns 150
+					/// let hp_max_2 = hit_point_max(FighterInformation, true); // Returns 150
+					/// ```
+					#[link_name = "\u{1}_ZN3app8lua_bind38FighterInformation__hit_point_max_implEPNS_18FighterInformationEb"]
+					pub fn hit_point_max(arg1: *mut root::app::FighterInformation, arg2: bool) -> f32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind38FighterInformation__fighter_color_implEPNS_18FighterInformationE"]
@@ -20097,9 +20320,13 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_accel_yEP9lua_State"]
                 pub fn get_accel_y(arg1: u64) -> f32;
             }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_brake_xEP9lua_State"]
+                pub fn get_brake_x(arg1: u64) -> f32;
+            }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_brake_yEP9lua_State"]
-                pub fn get_brake_y(arg1: u64);
+                pub fn get_brake_y(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_speed3fEP9lua_State"]
@@ -20187,7 +20414,7 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy16get_speed_lengthEP9lua_State"]
-                pub fn get_speed_length(arg1: u64);
+                pub fn get_speed_length(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy16set_damage_speedEP9lua_State"]
