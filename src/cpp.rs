@@ -15661,6 +15661,42 @@ pub mod root {
 						arg4: libc::c_int,
 					) -> u64;
 				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind38FighterInformation__is_backshield_implEPNS_18FighterInformationE"]
+					pub fn is_backshield(
+						arg1: *mut root::app::FighterInformation
+					) -> bool;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind38FighterInformation__is_rabbit_cap_implEPNS_18FighterInformationE"]
+					pub fn is_rabbit_cap(
+						arg1: *mut root::app::FighterInformation
+					) -> bool;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind37FighterInformation__is_reflector_implEPNS_18FighterInformationE"]
+					pub fn is_reflector(
+						arg1: *mut root::app::FighterInformation
+					) -> bool;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind38FighterInformation__is_rocketbelt_implEPNS_18FighterInformationE"]
+					pub fn is_rocketbelt(
+						arg1: *mut root::app::FighterInformation
+					) -> bool;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind33FighterInformation__is_screw_implEPNS_18FighterInformationE"]
+					pub fn is_screw(
+						arg1: *mut root::app::FighterInformation
+					) -> bool;
+				}
+				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind37FighterInformation__is_superleaf_implEPNS_18FighterInformationE"]
+					pub fn is_superleaf(
+						arg1: *mut root::app::FighterInformation
+					) -> bool;
+				}
 			}
 			pub mod FighterPikminLinkEventWeaponPikminOnFlag {
 				#[allow(unused_imports)]
