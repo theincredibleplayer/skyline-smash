@@ -19857,6 +19857,10 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd26REMOVE_FINAL_SCREEN_EFFECTEP9lua_State"]
                 pub fn REMOVE_FINAL_SCREEN_EFFECT(arg1: u64);
             }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app10sv_animcmd17REQ_MOTION_CAMERAEP9lua_State"]
+                pub fn REQ_MOTION_CAMERA(arg1: u64);
+            }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd22REQ_FINAL_START_CAMERAEP9lua_State"]
                 pub fn REQ_FINAL_START_CAMERA(arg1: u64);
