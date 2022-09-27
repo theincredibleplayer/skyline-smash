@@ -19338,6 +19338,10 @@ pub mod root {
                 pub fn CHECK_FINISH_CAMERA_IF_NOT_HP_MODE(arg1: u64);
             }
             extern "C" {
+                #[link_name = "\u{1}_ZN3app10sv_animcmd24CHECK_VALID_START_CAMERAEP9lua_State"]
+                pub fn CHECK_VALID_START_CAMERA(arg1: u64);
+            }
+			extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd30CHECK_VALID_FINAL_START_CAMERAEP9lua_State"]
                 pub fn CHECK_VALID_FINAL_START_CAMERA(arg1: u64);
             }
