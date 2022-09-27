@@ -2853,6 +2853,18 @@ pub mod root {
 					arg2: i32
 				) -> u64;
 			}
+			extern "C" {
+				#[link_name = "\u{1}_ZN3app24FighterSpecializer_Demon37check_disabled_motion_camera_of_scaleERNS_26BattleObjectModuleAccessorE"]
+				pub fn check_disabled_motion_camera_of_scale(
+					module_accessor: *mut root::app::BattleObjectModuleAccessor
+				) -> bool;
+			}
+			extern "C" {
+				#[link_name = "\u{1}_ZN3app24FighterSpecializer_Demon37check_disabled_motion_camera_of_stageERNS_26BattleObjectModuleAccessorE"]
+				pub fn check_disabled_motion_camera_of_stage(
+					module_accessor: *mut root::app::BattleObjectModuleAccessor
+				) -> bool;
+			}
         }
 
 		pub mod FighterSpecializer_Dolly {
