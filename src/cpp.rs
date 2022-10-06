@@ -3005,6 +3005,19 @@ pub mod root {
                 ) -> u64;
 			}
 		}
+
+		pub mod WeaponSpecializer_ShizueFishingrod {
+            #[allow(unused_imports)]
+			use super::super::super::root;
+			extern "C" {
+				#[link_name = "\u{1}_ZN3app34WeaponSpecializer_ShizueFishingrod13enable_searchERNS_26BattleObjectModuleAccessorEb"]
+                pub fn enable_search(
+					module_accessor: *mut root::app::BattleObjectModuleAccessor,
+					arg2: bool,
+                );
+			}
+		}
+
 		pub mod WeaponSpecializer_EFlameEsword {
             #[allow(unused_imports)]
 			use super::super::super::root;
