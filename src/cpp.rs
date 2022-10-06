@@ -19727,7 +19727,7 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd9IS_RANDOMEP9lua_State"]
-                pub fn IS_RANDOM(arg1: u64);
+                pub fn IS_RANDOM(arg1: u64) -> bool;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd14IS_STATUS_KINDEP9lua_State"]
