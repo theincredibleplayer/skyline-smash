@@ -20629,6 +20629,10 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy9set_speedEP9lua_State"]
                 pub fn set_speed(arg1: u64);
             }
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app17sv_kinetic_energy19set_needs_set_paramEP9lua_State"]
+                pub fn set_needs_set_param(arg1: u64);
+            }
         }
         pub mod sv_math {
             #[allow(unused_imports)]
