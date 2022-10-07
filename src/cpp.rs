@@ -5826,7 +5826,7 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind43GroundModule__get_cliff_movement_speed_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn get_cliff_movement_speed(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> root::phx::Vector2f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind42GroundModule__is_cliff_move_exception_implEPNS_26BattleObjectModuleAccessorE"]
