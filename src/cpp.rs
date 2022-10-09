@@ -6023,7 +6023,7 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind36GroundModule__ground_touch_flag_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn ground_touch_flag(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> i32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind39GroundModule__ground_touch_flag_ex_implEPNS_26BattleObjectModuleAccessorEbb"]
