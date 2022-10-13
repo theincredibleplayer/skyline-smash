@@ -5826,7 +5826,7 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind43GroundModule__get_cliff_movement_speed_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn get_cliff_movement_speed(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> root::phx::Vector2f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind42GroundModule__is_cliff_move_exception_implEPNS_26BattleObjectModuleAccessorE"]
@@ -6048,7 +6048,7 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind36GroundModule__ground_touch_flag_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn ground_touch_flag(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> u32;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind39GroundModule__ground_touch_flag_ex_implEPNS_26BattleObjectModuleAccessorEbb"]
