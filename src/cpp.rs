@@ -2838,6 +2838,12 @@ pub mod root {
 		pub mod FighterSpecializer_Demon {
             #[allow(unused_imports)]
             use super::super::super::root;
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Demon20clear_past_log_throwERNS_26BattleObjectModuleAccessorE"]
+                pub fn clear_log_past_throw(
+                	module_accessor: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app24FighterSpecializer_Demon9set_devilERNS_26BattleObjectModuleAccessorEbf"]
                 pub fn set_devil(
