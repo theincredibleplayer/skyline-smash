@@ -6977,6 +6977,14 @@ pub mod root {
 					);
 				}
 				extern "C" {
+					#[link_name = "\u{1}_ZN3app8lua_bind41AttackModule__set_ignore_capture_cut_implEPNS_26BattleObjectModuleAccessorEib"]
+					pub fn set_ignore_capture_cut(
+						module_accessor: *mut root::app::BattleObjectModuleAccessor,
+						arg2: libc::c_schar,
+						arg3: bool
+					);
+				}
+				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind29AttackModule__is_hit_abs_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn is_hit_abs(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> bool;
 				}
