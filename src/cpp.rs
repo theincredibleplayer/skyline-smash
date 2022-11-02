@@ -6426,7 +6426,7 @@ pub mod root {
 					#[link_name = "\u{1}_ZN3app8lua_bind34GroundModule__get_correct_pos_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn get_correct_pos(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> root::phx::Vector2f;
+					) -> root::phx::Vector3f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind40GroundModule__get_correct_pos_local_implEPNS_26BattleObjectModuleAccessorE"]
