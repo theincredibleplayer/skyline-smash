@@ -9701,13 +9701,13 @@ pub mod root {
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind28PostureModule__prev_pos_implEPNS_26BattleObjectModuleAccessorE"]
-					pub fn prev_pos(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> u64;
+					pub fn prev_pos(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> *const root::phx::Vector3f;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind31PostureModule__prev_pos_2d_implEPNS_26BattleObjectModuleAccessorE"]
 					pub fn prev_pos_2d(
 						module_accessor: *mut root::app::BattleObjectModuleAccessor,
-					) -> u64;
+					) -> root::phx::Vector2f;
 				}
 				extern "C" {
 					/// Returns the current direction the current battle object is facing. -1 = left, 1 = right
