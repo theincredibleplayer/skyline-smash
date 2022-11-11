@@ -6407,7 +6407,7 @@ pub mod root {
 						arg4: *const root::phx::Vector2f,
 						arg5: *mut root::phx::Vector2f,
 						arg6: bool,
-					) -> *const root::phx::Vector2f;
+					) -> *const u64;
 				}
 				extern "C" {
 					#[link_name = "\u{1}_ZN3app8lua_bind30GroundModule__test_ground_implEPNS_26BattleObjectModuleAccessorE"]
