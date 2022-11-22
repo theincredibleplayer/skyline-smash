@@ -2936,6 +2936,19 @@ pub mod root {
                 ) -> u64;
             }
 		}
+
+		pub mod WeaponSpecializer_SimonAxe {
+            #[allow(unused_imports)]
+			use super::super::super::root;
+			extern "C" {
+                #[link_name = "\u{1}_ZN3app26WeaponSpecializer_SimonAxe22set_map_collision_dataERNS_6WeaponEi"]
+                pub fn set_map_collision_data(
+					arg1: *mut root::app::Weapon,
+					arg2: i32
+                );
+			}
+		}
+
 		pub mod WeaponSpecializer_SimonWhip {
             #[allow(unused_imports)]
 			use super::super::super::root;
