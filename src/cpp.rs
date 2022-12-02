@@ -3070,7 +3070,7 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app30WeaponSpecializer_EFlameEsword31energy_motion_set_speed_mul_2ndERNS_26BattleObjectModuleAccessorERKN3phx8Vector2fE"]
                 pub fn energy_motion_set_speed_mul_2nd(
                     module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                    arg2: root::phx::Vector2f,
+                    arg2: *const root::phx::Vector2f,
                 );
             }
         }
