@@ -19339,6 +19339,10 @@ pub mod root {
                 pub fn ATTACK_ABS(arg1: u64);
             }
             extern "C" {
+                #[link_name = "\u{1}_ZN3app10sv_animcmd9ATTACK_FPEP9lua_State"]
+                pub fn ATTACK_FP(arg1: u64);
+            }
+            extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd19ATTACK_IGNORE_THROWEP9lua_State"]
                 pub fn ATTACK_IGNORE_THROW(arg1: u64);
             }
