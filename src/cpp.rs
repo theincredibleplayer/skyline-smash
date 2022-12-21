@@ -20475,7 +20475,7 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy13get_speed_mulEP9lua_State"]
-                pub fn get_speed_mul(arg1: u64);
+                pub fn get_speed_mul(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy13set_chara_dirEP9lua_State"]
@@ -20491,15 +20491,15 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy14get_rotation_xEP9lua_State"]
-                pub fn get_rotation_x(arg1: u64);
+                pub fn get_rotation_x(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy14get_rotation_yEP9lua_State"]
-                pub fn get_rotation_y(arg1: u64);
+                pub fn get_rotation_y(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy14get_rotation_zEP9lua_State"]
-                pub fn get_rotation_z(arg1: u64);
+                pub fn get_rotation_z(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy15mul_x_accel_addEP9lua_State"]
@@ -20551,11 +20551,11 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy17get_limit_speed_xEP9lua_State"]
-                pub fn get_limit_speed_x(arg1: u64);
+                pub fn get_limit_speed_x(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy17get_limit_speed_yEP9lua_State"]
-                pub fn get_limit_speed_y(arg1: u64);
+                pub fn get_limit_speed_y(arg1: u64) -> f32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy17set_speed_mul_2ndEP9lua_State"]
