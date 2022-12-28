@@ -3044,6 +3044,13 @@ pub mod root {
                     arg1: *mut root::app::Weapon
                 ) -> u64;
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app27WeaponSpecializer_SimonWhip22set_chain_2_visibilityERNS_6WeaponEb"]
+                pub fn set_chain_2_visibility(
+                    arg1: *mut root::app::Weapon,
+                    visibility: bool
+                );
+            }
         }
 
         pub mod WeaponSpecializer_ShizueFishingrod {
