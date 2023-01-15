@@ -19662,6 +19662,10 @@ pub mod root {
                 pub fn FLASH_NO_STOP(arg1: u64);
             }
             extern "C" {
+                #[link_name = "\u{1}_ZN3app10sv_animcmd19FLASH_SET_DIRECTIONEP9lua_State"]
+                pub fn FLASH_SET_DIRECTION(arg1: u64);
+            }
+            extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd31FLASH_SET_LAST_ATTACK_DIRECTIONEP9lua_State"]
                 pub fn FLASH_SET_LAST_ATTACK_DIRECTION(arg1: u64);
             }
