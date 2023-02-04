@@ -2374,6 +2374,35 @@ pub mod root {
 
         }
 
+        pub mod FighterSpecializer_Ryu {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app22FighterSpecializer_Ryu27check_special_air_s_commandERNS_26BattleObjectModuleAccessorE"]
+                pub fn check_special_air_s_command(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                ) -> bool;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app22FighterSpecializer_Ryu25req_shinsyoryu_hit_effectERNS_26BattleObjectModuleAccessorERKN3phx8Vector3fES6_bb"]
+                pub fn req_shinsyoryu_hit_effect(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                    arg2: *const root::phx::Vector3f,
+                    arg3: *const root::phx::Vector3f,
+                    arg4: bool,
+                    arg5: bool
+                ) -> u64;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app22FighterSpecializer_Ryu27set_final_stage_disp_statusERNS_26BattleObjectModuleAccessorEbb"]
+                pub fn set_final_stage_disp_status(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                    arg2: bool,
+                    arg3: bool
+                ) -> u64;
+            }
+        }
+
         pub mod FighterSpecializer_Inkling {
             #[allow(unused_imports)]
             use super::super::super::root;
