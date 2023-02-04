@@ -1712,6 +1712,16 @@ pub mod root {
                     module_accessor: *mut root::app::BattleObjectModuleAccessor
                 );
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14KineticUtility19reset_enable_energyEiRNS_26BattleObjectModuleAccessorEiRKN3phx8Vector2fERKNS3_8Vector3fE"]
+                pub fn reset_enable_energy(
+                    kinetic_energy_id: i32,
+                    module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                    unk3: i32,
+                    unk4: *const root::phx::Vector2f,
+                    unk5: *const root::phx::Vector3f
+                );
+            }
         }
         
         pub mod utility {
