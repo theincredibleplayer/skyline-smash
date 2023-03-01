@@ -4594,7 +4594,7 @@ pub mod root {
                 use super::super::super::super::root;
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind27BattleObjectSlow__rate_implEPNS_16BattleObjectSlowE"]
-                    pub fn rate(arg1: *mut root::app::BattleObjectSlow) -> u64;
+                    pub fn rate(arg1: *mut root::app::BattleObjectSlow) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind34BattleObjectSlow__is_estimate_implEPNS_16BattleObjectSlowE"]
