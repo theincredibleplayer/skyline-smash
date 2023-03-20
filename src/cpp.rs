@@ -20625,7 +20625,7 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy21is_cliff_ground_transEP9lua_State"]
-                pub fn is_cliff_ground_trans(arg1: u64);
+                pub fn is_cliff_ground_trans(arg1: u64) -> bool;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy23set_gravity_coefficientEP9lua_State"]
