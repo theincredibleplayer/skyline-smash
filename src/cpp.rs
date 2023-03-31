@@ -2384,6 +2384,18 @@ pub mod root {
 
         }
 
+        pub mod FighterSpecializer_Rockman {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Rockman14set_leafshieldERNS_26BattleObjectModuleAccessorEb"]
+                pub fn set_leafshield(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg2: bool
+                );
+            }
+        }
+
         pub mod FighterSpecializer_Ryu {
             #[allow(unused_imports)]
             use super::super::super::root;
