@@ -2390,7 +2390,7 @@ pub mod root {
             extern "C" {
                 #[link_name = "\u{1}_ZN3app26FighterSpecializer_Rockman14set_leafshieldERNS_26BattleObjectModuleAccessorEb"]
                 pub fn set_leafshield(
-                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
                     arg2: bool
                 );
             }
