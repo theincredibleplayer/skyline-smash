@@ -2534,6 +2534,19 @@ pub mod root {
             }
         }
 
+        pub mod FighterSpecializer_Snake {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Snake21is_constraint_articleERNS_7FighterEiNS_22ArticleOperationTargetE"]
+                pub fn is_constraint_article(
+                    arg1: *mut root::app::Fighter,
+                    article: i32,
+                    target: root::app::ArticleOperationTarget
+                ) -> u64;
+            }
+        }
+
         pub mod FighterSpecializer_Jack {
             #[allow(unused_imports)]
             use super::super::super::root;
