@@ -9869,21 +9869,21 @@ pub mod root {
                     pub fn rot_x(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> u64;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind25PostureModule__rot_y_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn rot_y(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> u64;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind25PostureModule__rot_z_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn rot_z(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> u64;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind27PostureModule__set_rot_implEPNS_26BattleObjectModuleAccessorERKN3phx8Vector3fEi"]
