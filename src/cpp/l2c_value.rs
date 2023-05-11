@@ -256,6 +256,10 @@ impl LuaConst {
     pub fn as_lua_int(&self) -> L2CValue {
         L2CValue::new_int(**self as u64)
     }
+        
+    pub const fn get_lua_hash(&self) -> u64 {
+        self.lua_bind_hash
+    }
 }
 //Release
 
