@@ -2381,7 +2381,12 @@ pub mod root {
                     arg2: i32,
                 );
             }
-
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet25get_special_hi_jump_speedERNS_21FighterModuleAccessorE"]
+                pub fn get_special_hi_jump_speed(
+                    arg1: *mut root::app::FighterModuleAccessor
+                ) -> nnsdk::root::nn::util::Vector3f;
+            }
         }
 
         pub mod FighterSpecializer_Rockman {
