@@ -1722,6 +1722,13 @@ pub mod root {
                     unk5: *const root::phx::Vector3f
                 );
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14KineticUtility16get_jump_speed_yEff"]
+                pub fn get_jump_speed_y(
+                    distance: f32,
+                    accel: f32
+                ) -> f32;
+            }
         }
         
         pub mod utility {
