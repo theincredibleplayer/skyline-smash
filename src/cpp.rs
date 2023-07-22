@@ -8886,7 +8886,7 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind49FighterStopModuleImpl__get_damage_stop_frame_implEPNS_26BattleObjectModuleAccessorE"]
                     pub fn get_damage_stop_frame(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                    ) -> f32;
+                    ) -> i32;
                 }
             }
             pub mod WeaponShizueFishingrodLinkEventReel {
