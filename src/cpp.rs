@@ -6374,7 +6374,7 @@ pub mod root {
                         arg3: *const root::phx::Vector2f,
                         arg4: *mut root::phx::Vector2f,
                         arg5: bool,
-                    ) -> u64;
+                    ) -> bool;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind39GroundModule__ray_check_hit_normal_implEPNS_26BattleObjectModuleAccessorERKN3phx8Vector2fES6_RS4_b"]
@@ -17184,7 +17184,7 @@ pub mod root {
                     pub fn get_have_item_trait(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> bool;
+                    ) -> u64;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind40ItemModule__get_have_item_hold_kind_implEPNS_26BattleObjectModuleAccessorEi"]
