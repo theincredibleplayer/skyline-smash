@@ -2997,6 +2997,21 @@ pub mod root {
             }
         }
 
+        pub mod WeaponSpecializer_LucarioAuraball {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app33WeaponSpecializer_LucarioAuraball15get_charge_rateERKNS_26BattleObjectModuleAccessorE"]
+                pub fn get_charge_rate(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                ) -> f32;
+                #[link_name = "\u{1}_ZN3app33WeaponSpecializer_LucarioAuraball9set_scaleERNS_26BattleObjectModuleAccessorE"]
+                pub fn set_scale(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+        }
+
         pub mod WeaponSpecializer_PTrainerPTrainer {
             #[allow(unused_imports)]
             use super::super::super::root;
