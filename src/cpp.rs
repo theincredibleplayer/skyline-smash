@@ -4349,7 +4349,7 @@ pub mod root {
                     pub fn get_special_command_lr(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> u64;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind35ControlModule__reverse_x_frame_implEPNS_26BattleObjectModuleAccessorE"]
