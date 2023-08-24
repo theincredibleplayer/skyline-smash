@@ -11,7 +11,7 @@ name = "smash"
 
 [dependencies]
 libc-nnsdk = "0.2.0"
-nnsdk = "0.2.0"
+nnsdk = "0.3.0"
 skyline = "0.2.1"
 lazy_static = "1.4.0"
 compile-time-lua-bind-hash = "1.1"
