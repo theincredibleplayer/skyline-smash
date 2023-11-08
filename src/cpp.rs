@@ -10003,7 +10003,7 @@ pub mod root {
                     pub fn set_stick_lr(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: f32,
-                    );
+                    ) -> bool;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind45PostureModule__set_sync_constraint_joint_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40E"]
