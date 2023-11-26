@@ -2300,6 +2300,29 @@ pub mod root {
 
         }
 
+        pub mod FighterSpecializer_Metaknight {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app29FighterSpecializer_Metaknight21check_edge_special_lwERNS_21FighterModuleAccessorE"]
+                pub fn check_edge_special_lw(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app29FighterSpecializer_Metaknight25get_final_target_pos_baseERNS_21FighterModuleAccessorE"]
+                pub fn get_final_target_pos_base(
+                    arg1: *mut root::app::FighterModuleAccessor
+                );
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app29FighterSpecializer_Metaknight27set_special_n_ground_effectERNS_7FighterE"]
+                pub fn set_special_n_ground_effect(
+                    arg1: *mut root::app::Fighter
+                );
+            }
+        }
+
         pub mod FighterSpecializer_Lucario {
             #[allow(unused_imports)]
             use super::super::super::root;
