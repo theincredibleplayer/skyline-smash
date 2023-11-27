@@ -5975,7 +5975,7 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind33GroundModule__hang_cliff_dir_implEPNS_26BattleObjectModuleAccessorE"]
                     pub fn hang_cliff_dir(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                    ) -> u64;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind43GroundModule__hang_can_entry_cliff_dir_implEPNS_26BattleObjectModuleAccessorE"]
