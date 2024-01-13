@@ -2330,7 +2330,7 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app27FighterSpecializer_Murabito22check_special_lw_plantERNS_21FighterModuleAccessorEN3phx8Vector2fEf"]
                 pub fn check_special_lw_plant(
                     arg1: *mut root::app::FighterModuleAccessor,
-                    arg2: root::app::Vector2f,
+                    arg2: root::phx::Vector2f,
                     arg3: f32
                 ) -> bool;
             }
