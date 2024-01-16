@@ -2449,21 +2449,23 @@ pub mod root {
             #[allow(unused_imports)]
             use super::super::super::root;
             extern "C" {
-                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15throwaway_swordERNS_7FighterERN3phx8Vector2fEb"]
-                pub fn throwaway_sword(
-                    arg1: *mut root::app::Fighter,
-                    arg2: root::phx::Vector2f,
-                    arg3: bool
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_grimoireERNS_21FighterModuleAccessorEi"]
+                pub fn change_grimoire(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg2: i32,
                 );
-            }
-            extern "C" {
+
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_hud_kindERNS_7FighterEi"]
                 pub fn change_hud_kind(
                     arg1: *mut root::app::Fighter,
                     arg2: i32,
                 );
-            }
-            extern "C" {
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet25get_special_hi_jump_speedERNS_21FighterModuleAccessorE"]
+                pub fn get_special_hi_jump_speed(
+                    arg1: *mut root::app::FighterModuleAccessor
+                ) -> nnsdk::root::nn::util::Vector3f;
+
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet17set_flag_to_tableERNS_21FighterModuleAccessorEibi"]
                 pub fn set_flag_to_table(
                     arg1: *mut root::app::FighterModuleAccessor,
@@ -2471,19 +2473,13 @@ pub mod root {
                     arg3: bool,
                     arg4: i32,
                 );
-            }
-            extern "C" {
-                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_grimoireERNS_21FighterModuleAccessorEi"]
-                pub fn change_grimoire(
-                    arg1: *mut root::app::FighterModuleAccessor,
-                    arg2: i32,
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15throwaway_swordERNS_7FighterERN3phx8Vector2fEb"]
+                pub fn throwaway_sword(
+                    arg1: *mut root::app::Fighter,
+                    arg2: root::phx::Vector2f,
+                    arg3: bool
                 );
-            }
-            extern "C" {
-                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet25get_special_hi_jump_speedERNS_21FighterModuleAccessorE"]
-                pub fn get_special_hi_jump_speed(
-                    arg1: *mut root::app::FighterModuleAccessor
-                ) -> nnsdk::root::nn::util::Vector3f;
             }
         }
 
