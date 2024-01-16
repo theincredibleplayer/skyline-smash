@@ -2461,6 +2461,33 @@ pub mod root {
                     arg2: i32,
                 );
 
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet13charge_pointsERNS_21FighterModuleAccessorE"]
+                pub fn charge_points(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                );
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet20check_special_lw_posERNS_21FighterModuleAccessorE"]
+                pub fn check_special_lw_pos(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                ) -> bool;
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet24exit_special_n_tron_holdERNS_21FighterModuleAccessorE"]
+                pub fn exit_special_n_tron_hold(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                );
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet22get_active_thunder_numERNS_21FighterModuleAccessorEi"]
+                pub fn get_active_thunder_num(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg2: i32
+                ) -> i32;
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet13get_magickindERNS_21FighterModuleAccessorEi"]
+                pub fn get_magickind(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg2: i32
+                ) -> i32;
+
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet25get_special_hi_jump_speedERNS_21FighterModuleAccessorE"]
                 pub fn get_special_hi_jump_speed(
                     arg1: *mut root::app::FighterModuleAccessor
@@ -2472,6 +2499,11 @@ pub mod root {
                     arg2: i32,
                     arg3: bool,
                     arg4: i32,
+                );
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet22special_lw_heal_damageERNS_21FighterModuleAccessorE"]
+                pub fn special_lw_heal_damage(
+                    arg1: *mut root::app::FighterModuleAccessor,
                 );
 
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15throwaway_swordERNS_7FighterERN3phx8Vector2fEb"]
