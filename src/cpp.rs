@@ -2227,6 +2227,61 @@ pub mod root {
 
         }
 
+        pub mod FighterSpecializer_Kirby {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby10copy_setupERNS_21FighterModuleAccessorEiNS_11FighterKindEbb"]
+                pub fn copy_setup(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg2: i32,
+                    arg3: root::app::FighterKind,
+                    arg4: bool,
+                    arg5: bool
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby10drink_itemERNS_7FighterE"]
+                pub fn drink_item(
+                    arg1: *mut root::app::Fighter,
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby13get_copy_kindERKNS_21FighterModuleAccessorE"]
+                pub fn get_copy_kind(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                ) -> i32;
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby16get_copy_slot_noERKNS_21FighterModuleAccessorE"]
+                pub fn get_copy_slot_no(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                ) -> i32;
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby13inhale_objectERNS_7FighterE"]
+                pub fn inhale_object(
+                    arg1: *mut root::app::Fighter,
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby28purin_clear_copy_attack_dataERNS_26BattleObjectModuleAccessorE"]
+                pub fn purin_clear_copy_attack_data(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby28purin_remove_effect_flushingERNS_26BattleObjectModuleAccessorE"]
+                pub fn purin_remove_effect_flushing(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby27purin_req_effect_dash_smokeERNS_26BattleObjectModuleAccessorE"]
+                pub fn purin_req_effect_dash_smoke(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby15purin_set_powerERNS_26BattleObjectModuleAccessorE"]
+                pub fn purin_set_power(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                );
+            }
+        }
+
         pub mod FighterSpecializer_Peach {
             #[allow(unused_imports)]
             use super::super::super::root;
