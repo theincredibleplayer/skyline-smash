@@ -2378,6 +2378,19 @@ pub mod root {
             }
         }
 
+        pub mod FighterSpecializer_Mewtwo {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Mewtwo22save_shadowball_statusERNS_21FighterModuleAccessorEbi"]
+                pub fn save_shadowball_status(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                    arg2: bool,
+                    arg3: i32
+                );
+            }
+        }
+
         pub mod FighterSpecializer_Murabito {
             #[allow(unused_imports)]
             use super::super::super::root;
