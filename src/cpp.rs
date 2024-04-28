@@ -8719,6 +8719,12 @@ pub mod root {
                     ) -> u64;
                 }
                 extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind56FighterControlModuleImpl__reserve_on_special_button_implEPNS_26BattleObjectModuleAccessorE"]
+                    pub fn reserve_on_special_button(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                    ) -> u64;
+                }
+                extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind49FighterControlModuleImpl__get_attack_s3_turn_implEPNS_26BattleObjectModuleAccessorE"]
                     pub fn get_attack_s3_turn(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
