@@ -13936,7 +13936,7 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind32SlowModule__clear_immediate_implEPNS_26BattleObjectModuleAccessorEib"]
                     pub fn clear_immediate(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::cint,
+                        arg2: libc::c_int,
                         arg3: bool
                     ) -> u64;
                 }
