@@ -13933,6 +13933,14 @@ pub mod root {
                     ) -> u64;
                 }
                 extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind32SlowModule__clear_immediate_implEPNS_26BattleObjectModuleAccessorEib"]
+                    pub fn clear_immediate(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        arg2: libc::cint,
+                        arg3: bool
+                    ) -> u64;
+                }
+                extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind21SlowModule__rate_implEPNS_26BattleObjectModuleAccessorE"]
                     pub fn rate(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> f32;
                 }
