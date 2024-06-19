@@ -19951,6 +19951,10 @@ pub mod root {
                 pub fn FT_MOTION_INTP_WAIT(arg1: u64);
             }
             extern "C" {
+                #[link_name = "\u{1}_ZN3app10sv_animcmd24FT_MOTION_INTP_WAIT_ITEMEP9lua_State"]
+                pub fn FT_MOTION_INTP_WAIT_ITEM(arg1: u64);
+            }
+            extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd14FT_MOTION_RATEEP9lua_State"]
                 pub fn FT_MOTION_RATE(arg1: u64);
             }
