@@ -20677,6 +20677,10 @@ pub mod root {
                     lua_state: u64
                 ) -> i32;
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information8stage_idEv"]
+                pub fn stage_id() -> i32;
+            }
         }
         pub mod sv_kinetic_energy {
             #[allow(unused_imports)]
