@@ -2522,7 +2522,7 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15throwaway_swordERNS_7FighterERN3phx8Vector2fEb"]
                 pub fn throwaway_sword(
                     arg1: *mut root::app::Fighter,
-                    arg2: root::phx::Vector2f,
+                    arg2: *const root::phx::Vector2f,
                     arg3: bool
                 );
             }
