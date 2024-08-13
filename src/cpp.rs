@@ -9730,6 +9730,13 @@ pub mod root {
                     );
                 }
                 extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind36ShieldModule__set_hit_stop_slow_implEPNS_26BattleObjectModuleAccessorEb"]
+                    pub fn set_hit_stop_slow(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        arg2: bool,
+                    );
+                }
+                extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind31ShieldModule__is_no_m_ball_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn is_no_m_ball(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
