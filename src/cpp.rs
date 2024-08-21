@@ -3069,7 +3069,7 @@ pub mod root {
             use super::super::super::root;
             extern "C" {
                 #[link_name = "\u{1}_ZN3app24FighterSpecializer_Demon20clear_past_log_throwERNS_26BattleObjectModuleAccessorE"]
-                pub fn clear_log_past_throw(
+                pub fn clear_past_log_throw(
                     module_accessor: *mut root::app::BattleObjectModuleAccessor
                 );
             }
