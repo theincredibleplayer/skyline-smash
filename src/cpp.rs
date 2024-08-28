@@ -3114,6 +3114,18 @@ pub mod root {
             }
         }
 
+        pub mod FighterSpecializer_Donkey {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Donkey16apply_lift_paramERNS_21FighterModuleAccessorEb"]
+                pub fn apply_lift_param(
+                    fighter_module_accessor: *mut root::app::FighterModuleAccessor,
+                    arg2: bool
+                );
+            }
+        }
+
         pub mod FighterSpecializer_Trail {
             #[allow(unused_imports)]
             use super::super::super::root;
