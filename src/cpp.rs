@@ -12182,7 +12182,7 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind49BattleObjectWorld__gravity_speed_coefficient_implEPNS_17BattleObjectWorldE"]
                     pub fn gravity_speed_coefficient(
                         arg1: *mut root::app::BattleObjectWorld,
-                    ) -> u64;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind31BattleObjectWorld__scale_z_implEPNS_17BattleObjectWorldE"]
@@ -15952,7 +15952,7 @@ pub mod root {
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind32FighterInformation__gravity_implEPNS_18FighterInformationE"]
-                    pub fn gravity(arg1: *mut root::app::FighterInformation) -> u64;
+                    pub fn gravity(arg1: *mut root::app::FighterInformation) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind39FighterInformation__summon_boss_id_implEPNS_18FighterInformationE"]
