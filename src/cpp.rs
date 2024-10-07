@@ -20726,7 +20726,7 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_speed3fEP9lua_State"]
-                pub fn get_speed3f(arg1: u64);
+                pub fn get_speed3f(arg1: u64) -> root::phx::Vector3f;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app17sv_kinetic_energy11get_speed_xEP9lua_State"]
