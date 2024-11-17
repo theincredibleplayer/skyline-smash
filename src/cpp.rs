@@ -20665,6 +20665,10 @@ pub mod root {
                 pub fn update_dead_up_camera_hit_first_distance_group(
                     lua_state: u64
                 ) -> bool;
+                #[link_name = "\u{1}_ZN3app15sv_fighter_util40get_dead_up_camera_hit_my_distance_groupEP9lua_State"]
+                pub fn get_dead_up_camera_hit_my_distance_group(
+                    lua_state: u64
+                ) -> i32;
             }
         }
 
