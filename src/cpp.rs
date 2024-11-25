@@ -1473,7 +1473,7 @@ pub mod root {
                 pub fn get_cliff_xlu_frame(
                     module_accessor: *mut root::app::BattleObjectModuleAccessor,
                     arg2: root::phx::Hash40
-                );
+                ) -> f32;
                 #[link_name = "\u{1}_ZN3app11FighterUtil19get_water_area_infoERNS_26BattleObjectModuleAccessorERNS_15stWaterAreaInfoE"]
                 pub fn get_water_area_info(
                     module_accessor: *mut root::app::BattleObjectModuleAccessor,
@@ -8910,7 +8910,7 @@ pub mod root {
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: root::phx::Hash40,
                         arg3: bool,
-                    ) -> i32;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind47FighterMotionModuleImpl__get_hit_xlu_frame_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40Eb"]
@@ -8918,7 +8918,7 @@ pub mod root {
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: root::phx::Hash40,
                         arg3: bool,
-                    ) -> i32;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind61FighterMotionModuleImpl__motion_kind_kirby_copy_original_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40E"]
