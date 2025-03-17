@@ -222,7 +222,9 @@ pub mod root {
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
         pub struct Article {
-            pub battle_object : BattleObject,
+            pub vtable: *const *const skyline::libc::c_void,
+            pub module_accessor: *mut root::app::BattleObjectModuleAccessor,
+            pub generate_id: i32,
         }
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
