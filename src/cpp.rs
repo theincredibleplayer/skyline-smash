@@ -2593,8 +2593,7 @@ pub mod root {
             extern "C" {
                 #[link_name = "\u{1}_ZN3app26FighterSpecializer_Inkling15get_ink_work_idEj"]
                 pub fn get_ink_work_id(
-                    arg1: *mut root::app::Fighter,
-                    arg2: u64,
+                    fighter_kind: i32,
                 ) -> i32;
             }
             extern "C" {
