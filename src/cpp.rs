@@ -3101,6 +3101,14 @@ pub mod root {
                     module_accessor: *mut root::app::BattleObjectModuleAccessor
                 );
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Demon14add_attack_logERNS_7FighterEib"]
+                pub fn add_attack_log(
+                    fighter: &mut root::app::Fighter,
+                    arg2: libc::c_int,
+                    arg3: bool
+                );
+            }
         }
 
         pub mod FighterSpecializer_Dolly {
