@@ -8853,6 +8853,26 @@ pub mod root {
                         command: libc::c_int,
                     );
                 }
+                extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind55FighterControlModuleImpl__special_command_623_step_implEPNS_26BattleObjectModuleAccessorE"]
+                    pub fn special_command_623_step(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor
+                    ) -> u8;
+                }
+                extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind51FighterControlModuleImpl__special_command_step_implEPNS_26BattleObjectModuleAccessorEi"]
+                    pub fn special_command_step(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        command: libc::c_int
+                    ) -> u8;
+                }
+                extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind63FighterControlModuleImpl__reset_special_command_individual_implEPNS_26BattleObjectModuleAccessorEi"]
+                    pub fn reset_special_command_individual(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        command: libc::c_int
+                    );
+                }
             }
             pub mod FighterRyuLinkEventFinalDeadDamage {
                 #[allow(unused_imports)]
