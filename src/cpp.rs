@@ -8837,6 +8837,14 @@ pub mod root {
                         arg2: libc::c_int,
                     ) -> u64;
                 }
+                extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind45FighterControlModuleImpl__delete_command_implEPNS_26BattleObjectModuleAccessorEij"]
+                    pub fn delete_command(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        category: libc::c_int,
+                        command: libc::c_int,
+                    );
+                }
             }
             pub mod FighterRyuLinkEventFinalDeadDamage {
                 #[allow(unused_imports)]
