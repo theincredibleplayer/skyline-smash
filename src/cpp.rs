@@ -12375,6 +12375,13 @@ pub mod root {
                     );
                 }
                 extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind55JostleModule__set_push_speed_x_overlap_rate_status_implEPNS_26BattleObjectModuleAccessorEf"]
+                    pub fn set_push_speed_x_overlap_rate_status(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        arg2: f32,
+                    );
+                }
+                extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind28JostleModule__area_kind_implEPNS_26BattleObjectModuleAccessorE"]
                     pub fn area_kind(module_accessor: *mut root::app::BattleObjectModuleAccessor)
                         -> u64;
