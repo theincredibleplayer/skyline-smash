@@ -8,7 +8,7 @@ pub unsafe fn find_pane_by_name_recursive(pane: *const Pane, s: *const c_char) -
 #[skyline::from_offset(0x583c0)]
 pub unsafe fn find_pane_by_name(pane: *const Pane, s: *const c_char, recursive: bool) -> *mut Pane;
 
-#[skyline::from_offset(0x37a1f10)]
+#[skyline::from_offset(0x37a22f0)]
 pub unsafe fn pane_set_text_string(pane: *mut TextBox, s: *const c_char);
 
 #[skyline::from_offset(0x58290)]
