@@ -768,8 +768,8 @@ pub mod root {
             pub target_lr: u16, //opponent's facing (for shulk back slash?)
             pub target_part: u16, //collision part
             pub attr: u64, //collision attribute
-            pub sound_level: u16, //SFX level
-            pub sound_attr: u16, //SFX type
+            pub sound_level: u8, //SFX level
+            pub sound_attr: u8, //SFX type
         }
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
