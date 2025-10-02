@@ -2284,6 +2284,17 @@ pub mod root {
             }
         }
 
+        pub mod FighterSpecializer_Palutena {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app27FighterSpecializer_Palutena19init_final_settingsERNS_26BattleObjectModuleAccessorE"]
+                pub fn final_init_status(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+        }
+
         pub mod FighterSpecializer_Peach {
             #[allow(unused_imports)]
             use super::super::super::root;
@@ -3161,6 +3172,17 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app33WeaponSpecializer_LucarioAuraball9set_scaleERNS_26BattleObjectModuleAccessorE"]
                 pub fn set_scale(
                     arg1: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+        }
+
+        pub mod WeaponSpecializer_PalutenaExplosiveflame {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app40WeaponSpecializer_PalutenaExplosiveflame13is_touch_downERNS_6WeaponE"]
+                pub fn is_touch_down(
+                    arg1: *mut root::app::Weapon
                 );
             }
         }
