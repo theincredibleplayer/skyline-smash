@@ -3176,6 +3176,26 @@ pub mod root {
             }
         }
 
+        pub mod WeaponSpecializer_MewtwoShadowball {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app34WeaponSpecializer_MewtwoShadowball16get_charge_frameERKNS_26BattleObjectModuleAccessorE"]
+                pub fn get_charge_frame(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                ) -> f32;
+                #[link_name = "\u{1}_ZN3app34WeaponSpecializer_MewtwoShadowball15get_charge_rateERKNS_26BattleObjectModuleAccessorE"]
+                pub fn get_charge_rate(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                ) -> f32;
+                #[link_name = "\u{1}_ZN3app34WeaponSpecializer_MewtwoShadowball16set_effect_scaleERNS_26BattleObjectModuleAccessorEb"]
+                pub fn set_effect_scale(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                    is_hit: bool
+                );
+            }
+        }
+
         pub mod WeaponSpecializer_PalutenaExplosiveflame {
             #[allow(unused_imports)]
             use super::super::super::root;
