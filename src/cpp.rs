@@ -3203,7 +3203,7 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app40WeaponSpecializer_PalutenaExplosiveflame13is_touch_downERNS_6WeaponE"]
                 pub fn is_touch_down(
                     arg1: *mut root::app::Weapon
-                );
+                ) -> bool;
             }
         }
 
