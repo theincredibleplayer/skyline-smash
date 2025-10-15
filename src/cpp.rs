@@ -20594,7 +20594,7 @@ pub mod root {
                 pub fn get_kirifuda_position(
                     lua_state: u64,
                     arg2: i32
-                ) -> u64;
+                ) -> skyline::nn::util::Vector3f;
                 #[link_name = "\u{1}_ZN3app15sv_fighter_util18get_walk_speed_mulEP9lua_State"]
                 pub fn get_walk_speed_mul(
                     lua_state: u64
