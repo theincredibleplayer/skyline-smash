@@ -4939,7 +4939,7 @@ pub mod root {
                     pub fn req_on_joint(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         effHash: root::phx::Hash40,
-                        arg3: root::phx::Hash40,
+                        boneHash: root::phx::Hash40,
                         pos: *const root::phx::Vector3f,
                         rot: *const root::phx::Vector3f,
                         size: f32,
@@ -4970,7 +4970,7 @@ pub mod root {
                     pub fn req_follow(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         effHash: root::phx::Hash40,
-                        arg3: root::phx::Hash40,
+                        boneHash: root::phx::Hash40,
                         pos: *const root::phx::Vector3f,
                         rot: *const root::phx::Vector3f,
                         size: f32,
@@ -9325,17 +9325,17 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind28ArticleModule__set_flag_implEPNS_26BattleObjectModuleAccessorEibi"]
                     pub fn set_flag(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: bool,
-                        arg4: libc::c_int,
+                        article: libc::c_int,
+                        value: bool,
+                        flag: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind27ArticleModule__is_flag_implEPNS_26BattleObjectModuleAccessorEii"]
                     pub fn is_flag(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: libc::c_int,
+                        article: libc::c_int,
+                        flag: libc::c_int,
                     ) -> bool;
                 }
                 extern "C" {
@@ -9351,26 +9351,26 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind27ArticleModule__set_int_implEPNS_26BattleObjectModuleAccessorEiii"]
                     pub fn set_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: libc::c_int,
-                        arg4: libc::c_int,
+                        article: libc::c_int,
+                        value: libc::c_int,
+                        int_const: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind27ArticleModule__get_int_implEPNS_26BattleObjectModuleAccessorEii"]
                     pub fn get_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: libc::c_int,
+                        article: libc::c_int,
+                        int_const: libc::c_int,
                     ) -> i32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind29ArticleModule__set_float_implEPNS_26BattleObjectModuleAccessorEifi"]
                     pub fn set_float(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: f32,
-                        arg4: libc::c_int,
+                        article: libc::c_int,
+                        value: f32,
+                        float_const: libc::c_int,
                     );
                 }
                 extern "C" {
@@ -10976,30 +10976,30 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind24WorkModule__get_int_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn get_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        int_const: libc::c_int,
                     ) -> i32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind24WorkModule__set_int_implEPNS_26BattleObjectModuleAccessorEii"]
                     pub fn set_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: libc::c_int,
+                        value: libc::c_int,
+                        int_const: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind26WorkModule__get_int64_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn get_int64(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        int_const: libc::c_int,
                     ) -> u64;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind26WorkModule__set_int64_implEPNS_26BattleObjectModuleAccessorEli"]
                     pub fn set_int64(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_long,
-                        arg3: libc::c_int,
+                        value: libc::c_long,
+                        int_const: libc::c_int,
                     );
                 }
                 extern "C" {
@@ -11015,75 +11015,75 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind24WorkModule__inc_int_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn inc_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        int_const: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind24WorkModule__dec_int_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn dec_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        int_const: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind24WorkModule__add_int_implEPNS_26BattleObjectModuleAccessorEii"]
                     pub fn add_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: libc::c_int,
+                        value: libc::c_int,
+                        int_const: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind24WorkModule__sub_int_implEPNS_26BattleObjectModuleAccessorEii"]
                     pub fn sub_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: libc::c_int,
+                        value: libc::c_int,
+                        int_const: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind24WorkModule__mul_int_implEPNS_26BattleObjectModuleAccessorEii"]
                     pub fn mul_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: libc::c_int,
+                        value: libc::c_int,
+                        int_const: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind24WorkModule__div_int_implEPNS_26BattleObjectModuleAccessorEii"]
                     pub fn div_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: libc::c_int,
+                        value: libc::c_int,
+                        int_const: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind31WorkModule__count_down_int_implEPNS_26BattleObjectModuleAccessorEii"]
                     pub fn count_down_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
-                        arg3: libc::c_int,
+                        value: libc::c_int,
+                        int_const: libc::c_int,
                     ) -> bool;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind24WorkModule__is_flag_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn is_flag(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        flag: libc::c_int,
                     ) -> bool;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind24WorkModule__on_flag_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn on_flag(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        flag: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind25WorkModule__off_flag_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn off_flag(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        flag: libc::c_int,
                     );
                 }
                 extern "C" {
@@ -11111,92 +11111,92 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind25WorkModule__set_flag_implEPNS_26BattleObjectModuleAccessorEbi"]
                     pub fn set_flag(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: bool,
-                        arg3: libc::c_int,
+                        value: bool,
+                        flag: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind30WorkModule__turn_off_flag_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn turn_off_flag(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        flag: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind45WorkModule__enable_transition_term_group_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn enable_transition_term_group(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind45WorkModule__unable_transition_term_group_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn unable_transition_term_group(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind44WorkModule__clear_transition_term_group_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn clear_transition_term_group(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term_group: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind48WorkModule__is_enable_transition_term_group_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn is_enable_transition_term_group(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term_group: libc::c_int,
                     ) -> bool;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind48WorkModule__enable_transition_term_group_ex_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn enable_transition_term_group_ex(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term_group: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind52WorkModule__enable_transition_term_group_ex_all_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn enable_transition_term_group_ex_all(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term_group: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind48WorkModule__unable_transition_term_group_ex_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn unable_transition_term_group_ex(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term_group: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind52WorkModule__unable_transition_term_group_ex_all_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn unable_transition_term_group_ex_all(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term_group: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind42WorkModule__is_enable_transition_term_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn is_enable_transition_term(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term: libc::c_int,
                     ) -> bool;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind39WorkModule__enable_transition_term_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn enable_transition_term(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind39WorkModule__unable_transition_term_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn unable_transition_term(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term: libc::c_int,
                     );
                 }
                 extern "C" {
@@ -11209,49 +11209,49 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind49WorkModule__is_enable_transition_term_forbid_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn is_enable_transition_term_forbid(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term: libc::c_int,
                     ) -> bool;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind46WorkModule__enable_transition_term_forbid_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn enable_transition_term_forbid(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind53WorkModule__enable_transition_term_forbid_indivi_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn enable_transition_term_forbid_indivi(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind46WorkModule__unable_transition_term_forbid_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn unable_transition_term_forbid(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind53WorkModule__unable_transition_term_forbid_indivi_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn unable_transition_term_forbid_indivi(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind52WorkModule__enable_transition_term_forbid_group_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn enable_transition_term_forbid_group(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term_group: libc::c_int,
                     );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind52WorkModule__unable_transition_term_forbid_group_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn unable_transition_term_forbid_group(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        transition_term_group: libc::c_int,
                     );
                 }
                 extern "C" {
@@ -11271,24 +11271,24 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind30WorkModule__get_param_int_implEPNS_26BattleObjectModuleAccessorEmm"]
                     pub fn get_param_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_ulong,
-                        arg3: libc::c_ulong,
+                        parent_param: libc::c_ulong,
+                        child_param: libc::c_ulong,
                     ) -> i32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind32WorkModule__get_param_int64_implEPNS_26BattleObjectModuleAccessorEmm"]
                     pub fn get_param_int64(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_ulong,
-                        arg3: libc::c_ulong,
+                        parent_param: libc::c_ulong,
+                        child_param: libc::c_ulong,
                     ) -> u64;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind32WorkModule__get_param_float_implEPNS_26BattleObjectModuleAccessorEmm"]
                     pub fn get_param_float(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_ulong,
-                        arg3: libc::c_ulong,
+                        parent_param: libc::c_ulong,
+                        child_param: libc::c_ulong,
                     ) -> f32;
                 }
                 extern "C" {
@@ -17765,7 +17765,7 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind52StatusModule__change_status_request_from_script_implEPNS_26BattleObjectModuleAccessorEib"]
                     pub fn change_status_request_from_script(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        status: libc::c_int,
                         arg3: bool,
                     ) -> u64;
                 }
@@ -17811,7 +17811,7 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind44StatusModule__set_status_kind_interrupt_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn set_status_kind_interrupt(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        status: libc::c_int,
                     );
                 }
                 extern "C" {
@@ -17850,7 +17850,7 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind38StatusModule__change_status_force_implEPNS_26BattleObjectModuleAccessorEib"]
                     pub fn change_status_force(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: libc::c_int,
+                        status: libc::c_int,
                         arg3: bool,
                     ) -> u64;
                 }
@@ -17904,7 +17904,7 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind37StatusModule__set_situation_kind_implEPNS_26BattleObjectModuleAccessorENS_13SituationKindEb"]
                     pub fn set_situation_kind(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: root::app::SituationKind,
+                        situation_kind: root::app::SituationKind,
                         arg3: bool,
                     );
                 }
@@ -17926,14 +17926,14 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind32StatusModule__init_settings_implEPNS_26BattleObjectModuleAccessorENS_13SituationKindEijNS_20GroundCliffCheckKindEbiiii"]
                     pub fn init_settings(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: root::app::SituationKind,
-                        arg3: libc::c_int,
-                        arg4: libc::c_uint,
-                        arg5: root::app::GroundCliffCheckKind,
+                        situation_kind: root::app::SituationKind,
+                        kinetic_type: libc::c_int,
+                        ground_correct_kind: libc::c_uint,
+                        cliff_check: root::app::GroundCliffCheckKind,
                         arg6: bool,
-                        arg7: libc::c_int,
-                        arg8: libc::c_int,
-                        arg9: libc::c_int,
+                        keep_flag: libc::c_int,
+                        keep_int: libc::c_int,
+                        keep_float: libc::c_int,
                         arg10: libc::c_int,
                     ) -> u64;
                 }
