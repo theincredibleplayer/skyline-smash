@@ -5717,8 +5717,8 @@ pub mod root {
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: root::phx::Hash40,
                         arg3: root::phx::Hash40,
-                        arg4: skyline::nn::util::Vector2f,
-                        arg5: skyline::nn::util::Vector3f,
+                        arg4: smash_rs::cpp::simd::Vector2,
+                        arg5: smash_rs::cpp::simd::Vector3,
                         arg6: bool,
                         arg7: f32,
                         arg8: f32,
@@ -5729,8 +5729,8 @@ pub mod root {
                     pub fn set_post_effect_line_circle_target(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: root::phx::Hash40,
-                        arg3: skyline::nn::util::Vector2f,
-                        arg4: skyline::nn::util::Vector3f,
+                        arg3: smash_rs::cpp::simd::Vector2,
+                        arg4: smash_rs::cpp::simd::Vector3,
                         arg5: bool,
                     );
                 }
@@ -5739,10 +5739,10 @@ pub mod root {
                     pub fn request_post_effect_line_parallel_2d(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: root::phx::Hash40,
-                        arg3: skyline::nn::util::Vector2f,
-                        arg4: skyline::nn::util::Vector2f,
-                        arg5: skyline::nn::util::Vector2f,
-                        arg6: skyline::nn::util::Vector2f,
+                        arg3: smash_rs::cpp::simd::Vector2,
+                        arg4: smash_rs::cpp::simd::Vector2,
+                        arg5: smash_rs::cpp::simd::Vector2,
+                        arg6: smash_rs::cpp::simd::Vector2,
                         arg7: bool,
                         arg8: f32,
                         arg9: f32,
