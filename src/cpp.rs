@@ -196,7 +196,7 @@ pub mod root {
             pub vtable: *const *const skyline::libc::c_void,
             pub battle_object_id: u32,
             pub kind: u32,
-            _x10: u64,
+            pub entry_id: u64,
             pub agent_kind_hash: root::phx::Hash40,
             pub module_accessor: *mut root::app::BattleObjectModuleAccessor
         }
@@ -222,7 +222,9 @@ pub mod root {
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
         pub struct Article {
-            pub battle_object : BattleObject,
+            pub vtable: *const *const skyline::libc::c_void,
+            pub module_accessor: *mut root::app::BattleObjectModuleAccessor,
+            pub generate_id: i32,
         }
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
@@ -766,8 +768,8 @@ pub mod root {
             pub target_lr: u16, //opponent's facing (for shulk back slash?)
             pub target_part: u16, //collision part
             pub attr: u64, //collision attribute
-            pub sound_level: u16, //SFX level
-            pub sound_attr: u16, //SFX type
+            pub sound_level: u8, //SFX level
+            pub sound_attr: u8, //SFX type
         }
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
@@ -1473,7 +1475,7 @@ pub mod root {
                 pub fn get_cliff_xlu_frame(
                     module_accessor: *mut root::app::BattleObjectModuleAccessor,
                     arg2: root::phx::Hash40
-                );
+                ) -> f32;
                 #[link_name = "\u{1}_ZN3app11FighterUtil19get_water_area_infoERNS_26BattleObjectModuleAccessorERNS_15stWaterAreaInfoE"]
                 pub fn get_water_area_info(
                     module_accessor: *mut root::app::BattleObjectModuleAccessor,
@@ -2282,6 +2284,17 @@ pub mod root {
             }
         }
 
+        pub mod FighterSpecializer_Palutena {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app27FighterSpecializer_Palutena19init_final_settingsERNS_26BattleObjectModuleAccessorE"]
+                pub fn final_init_status(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                );
+            }
+        }
+
         pub mod FighterSpecializer_Peach {
             #[allow(unused_imports)]
             use super::super::super::root;
@@ -2591,8 +2604,7 @@ pub mod root {
             extern "C" {
                 #[link_name = "\u{1}_ZN3app26FighterSpecializer_Inkling15get_ink_work_idEj"]
                 pub fn get_ink_work_id(
-                    arg1: *mut root::app::Fighter,
-                    arg2: u64,
+                    fighter_kind: i32,
                 ) -> i32;
             }
             extern "C" {
@@ -3100,6 +3112,14 @@ pub mod root {
                     module_accessor: *mut root::app::BattleObjectModuleAccessor
                 );
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Demon14add_attack_logERNS_7FighterEib"]
+                pub fn add_attack_log(
+                    fighter: &mut root::app::Fighter,
+                    arg2: libc::c_int,
+                    arg3: bool
+                );
+            }
         }
 
         pub mod FighterSpecializer_Dolly {
@@ -3153,6 +3173,37 @@ pub mod root {
                 pub fn set_scale(
                     arg1: *mut root::app::BattleObjectModuleAccessor
                 );
+            }
+        }
+
+        pub mod WeaponSpecializer_MewtwoShadowball {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app34WeaponSpecializer_MewtwoShadowball16get_charge_frameERKNS_26BattleObjectModuleAccessorE"]
+                pub fn get_charge_frame(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                ) -> f32;
+                #[link_name = "\u{1}_ZN3app34WeaponSpecializer_MewtwoShadowball15get_charge_rateERKNS_26BattleObjectModuleAccessorE"]
+                pub fn get_charge_rate(
+                    arg1: *mut root::app::BattleObjectModuleAccessor
+                ) -> f32;
+                #[link_name = "\u{1}_ZN3app34WeaponSpecializer_MewtwoShadowball16set_effect_scaleERNS_26BattleObjectModuleAccessorEb"]
+                pub fn set_effect_scale(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                    is_hit: bool
+                );
+            }
+        }
+
+        pub mod WeaponSpecializer_PalutenaExplosiveflame {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app40WeaponSpecializer_PalutenaExplosiveflame13is_touch_downERNS_6WeaponE"]
+                pub fn is_touch_down(
+                    arg1: *mut root::app::Weapon
+                ) -> bool;
             }
         }
 
@@ -6953,7 +7004,7 @@ pub mod root {
                     pub fn get_attack_limit(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> u64;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind37AbsorberModule__set_hit_stop_mul_implEPNS_26BattleObjectModuleAccessorEf"]
@@ -8836,6 +8887,34 @@ pub mod root {
                         arg2: libc::c_int,
                     ) -> u64;
                 }
+                extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind45FighterControlModuleImpl__delete_command_implEPNS_26BattleObjectModuleAccessorEij"]
+                    pub fn delete_command(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        category: libc::c_int,
+                        command: libc::c_int,
+                    );
+                }
+                extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind55FighterControlModuleImpl__special_command_623_step_implEPNS_26BattleObjectModuleAccessorE"]
+                    pub fn special_command_623_step(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor
+                    ) -> u8;
+                }
+                extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind51FighterControlModuleImpl__special_command_step_implEPNS_26BattleObjectModuleAccessorEi"]
+                    pub fn special_command_step(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        command: libc::c_int
+                    ) -> u8;
+                }
+                extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind63FighterControlModuleImpl__reset_special_command_individual_implEPNS_26BattleObjectModuleAccessorEi"]
+                    pub fn reset_special_command_individual(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        command: libc::c_int
+                    );
+                }
             }
             pub mod FighterRyuLinkEventFinalDeadDamage {
                 #[allow(unused_imports)]
@@ -8910,7 +8989,7 @@ pub mod root {
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: root::phx::Hash40,
                         arg3: bool,
-                    ) -> i32;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind47FighterMotionModuleImpl__get_hit_xlu_frame_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40Eb"]
@@ -8918,7 +8997,7 @@ pub mod root {
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: root::phx::Hash40,
                         arg3: bool,
-                    ) -> i32;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind61FighterMotionModuleImpl__motion_kind_kirby_copy_original_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40E"]
@@ -9732,7 +9811,7 @@ pub mod root {
                     pub fn get_attack_limit(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> u64;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind35ShieldModule__set_hit_stop_mul_implEPNS_26BattleObjectModuleAccessorEf"]
@@ -12338,6 +12417,13 @@ pub mod root {
                     );
                 }
                 extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind55JostleModule__set_push_speed_x_overlap_rate_status_implEPNS_26BattleObjectModuleAccessorEf"]
+                    pub fn set_push_speed_x_overlap_rate_status(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        arg2: f32,
+                    );
+                }
+                extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind28JostleModule__area_kind_implEPNS_26BattleObjectModuleAccessorE"]
                     pub fn area_kind(module_accessor: *mut root::app::BattleObjectModuleAccessor)
                         -> u64;
@@ -13231,7 +13317,7 @@ pub mod root {
                     pub fn get_attack_limit(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> u64;
+                    ) -> f32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind38ReflectorModule__set_hit_stop_mul_implEPNS_26BattleObjectModuleAccessorEf"]
@@ -20665,6 +20751,10 @@ pub mod root {
                 pub fn update_dead_up_camera_hit_first_distance_group(
                     lua_state: u64
                 ) -> bool;
+                #[link_name = "\u{1}_ZN3app15sv_fighter_util40get_dead_up_camera_hit_my_distance_groupEP9lua_State"]
+                pub fn get_dead_up_camera_hit_my_distance_group(
+                    lua_state: u64
+                ) -> i32;
             }
         }
 
