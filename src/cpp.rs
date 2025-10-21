@@ -5715,22 +5715,22 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind50EffectModule__request_post_effect_line_circle_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40ES4_NS3_8Vector2fENS3_8Vector3fEbff"]
                     pub fn request_post_effect_line_circle(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: root::phx::Hash40,
-                        arg3: root::phx::Hash40,
-                        arg4: smash_rs::cpp::simd::Vector2,
-                        arg5: smash_rs::cpp::simd::Vector3,
+                        effHash: root::phx::Hash40,
+                        boneHash: root::phx::Hash40,
+                        radius: smash_rs::cpp::simd::Vector2,
+                        offsets: smash_rs::cpp::simd::Vector3,
                         arg6: bool,
-                        arg7: f32,
-                        arg8: f32,
+                        duration: f32,
+                        fade: f32,
                     ) -> u64;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind53EffectModule__set_post_effect_line_circle_target_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40ENS3_8Vector2fENS3_8Vector3fEb"]
                     pub fn set_post_effect_line_circle_target(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: root::phx::Hash40,
-                        arg3: smash_rs::cpp::simd::Vector2,
-                        arg4: smash_rs::cpp::simd::Vector3,
+                        boneHash: root::phx::Hash40,
+                        radius: smash_rs::cpp::simd::Vector2,
+                        offsets: smash_rs::cpp::simd::Vector3,
                         arg5: bool,
                     );
                 }
@@ -5738,14 +5738,14 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind55EffectModule__request_post_effect_line_parallel_2d_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40ENS3_8Vector2fES5_S5_S5_bff"]
                     pub fn request_post_effect_line_parallel_2d(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        arg2: root::phx::Hash40,
+                        effHash: root::phx::Hash40,
                         arg3: smash_rs::cpp::simd::Vector2,
                         arg4: smash_rs::cpp::simd::Vector2,
                         arg5: smash_rs::cpp::simd::Vector2,
                         arg6: smash_rs::cpp::simd::Vector2,
                         arg7: bool,
-                        arg8: f32,
-                        arg9: f32,
+                        duration: f32,
+                        fade: f32,
                     ) -> u64;
                 }
                 extern "C" {
