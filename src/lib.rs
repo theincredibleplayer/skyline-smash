@@ -1,12 +1,12 @@
 #![cfg_attr(not(feature = "std"), no_std)]
-#![feature(const_if_match, const_loop, track_caller, proc_macro_hygiene)]
-#![feature(asm)]
-#![feature(associated_type_bounds)]
+#![feature(proc_macro_hygiene)]
 #![feature(simd_ffi)] // lol sorry jam
 
 pub mod crc32;
 
 pub mod params;
+
+pub mod ui2d;
 
 #[doc(hidden)]
 pub mod cpp;
