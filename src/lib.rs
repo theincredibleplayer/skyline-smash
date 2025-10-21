@@ -8,8 +8,6 @@ pub mod crc32;
 
 pub mod params;
 
-pub mod ui2d;
-
 #[doc(hidden)]
 pub mod cpp;
 
