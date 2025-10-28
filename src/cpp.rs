@@ -18016,11 +18016,11 @@ pub mod root {
                         kinetic_type: libc::c_int,
                         ground_correct_kind: libc::c_uint,
                         cliff_check: root::app::GroundCliffCheckKind,
-                        arg6: bool,
+                        enable_jostle: bool,
                         keep_flag: libc::c_int,
                         keep_int: libc::c_int,
                         keep_float: libc::c_int,
-                        arg10: libc::c_int,
+                        succeeds_bits: libc::c_int,
                     ) -> u64;
                 }
             }
