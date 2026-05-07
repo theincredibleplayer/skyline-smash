@@ -11140,8 +11140,8 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind31WorkModule__count_down_int_implEPNS_26BattleObjectModuleAccessorEii"]
                     pub fn count_down_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        value: libc::c_int,
                         int_const: libc::c_int,
+                        end_value: libc::c_int,
                     ) -> bool;
                 }
                 extern "C" {
