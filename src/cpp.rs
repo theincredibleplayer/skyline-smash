@@ -3161,6 +3161,22 @@ pub mod root {
             }
         }
 
+        pub mod FighterSpecializer_Gaogaen {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Gaogaen11revenge_offERNS_7FighterEb"]
+                pub fn revenge_off(
+                    arg1: *mut root::app::Fighter,
+                    force: bool
+                );
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Gaogaen13generate_ropeERNS_21FighterModuleAccessorE"]
+                pub fn generate_rope(
+                    arg1: *mut root::app::FighterModuleAccessor
+                );
+            }
+        }
+
         pub mod WeaponSpecializer_LucarioAuraball {
             #[allow(unused_imports)]
             use super::super::super::root;
