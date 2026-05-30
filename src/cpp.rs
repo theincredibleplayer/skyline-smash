@@ -1297,7 +1297,7 @@ pub mod root {
             }
         }
 
-        pub mod Item {
+        pub mod item {
             #[allow(unused_imports)]
             use super::super::super::root;
             extern "C" {
