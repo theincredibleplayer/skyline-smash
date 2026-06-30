@@ -355,7 +355,7 @@ pub mod root {
                 arg2: libc::c_uchar,
                 arg3: u32
             ) -> u64 {
-                Fighter_set_final(lua_state, arg2, arg3) 
+                Fighter_set_final(lua_state, arg2, arg3)
             }
             #[inline]
             pub unsafe fn set_opponent_team_slow(
@@ -1257,7 +1257,7 @@ pub mod root {
                 pub fn calc_offset_with_gravity(
                     arg1: *const root::phx::Vector2f,
                     arg2: *const root::phx::Vector3f,
-                ) -> root::phx::Vector4f;				
+                ) -> root::phx::Vector4f;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app5stage20get_gravity_positionEv"]
@@ -1294,6 +1294,36 @@ pub mod root {
                     arg1: *const root::phx::Vector3f,
                     arg2: f32
                 ) -> f32;
+            }
+        }
+
+        pub mod item {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app4item14request_removeEP9lua_State"]
+                pub fn request_remove(
+                    arg: u64
+                );
+                #[link_name = "\u{1}_ZN3app4item9variationEP9lua_State"]
+                pub fn variation(
+                    arg: u64
+                ) -> i32;
+            }
+        }
+        
+        pub mod item_collision_manager {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app22item_collision_manager24disable_ground_collisionEP9lua_State"]
+                pub fn disable_ground_collision(
+                    arg: u64
+                );
+                #[link_name = "\u{1}_ZN3app22item_collision_manager23remove_ground_collisionEP9lua_State"]
+                pub fn remove_ground_collision(
+                    arg: u64
+                );
             }
         }
 
@@ -1732,7 +1762,7 @@ pub mod root {
                 ) -> f32;
             }
         }
-        
+
         pub mod utility {
             #[allow(unused_imports)]
             use super::super::super::root;
@@ -3158,6 +3188,22 @@ pub mod root {
                 pub fn get_special_s_target_pos(
                     arg1: u32
                 ) -> root::phx::Vector3f;
+            }
+        }
+
+        pub mod FighterSpecializer_Gaogaen {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Gaogaen11revenge_offERNS_7FighterEb"]
+                pub fn revenge_off(
+                    arg1: *mut root::app::Fighter,
+                    force: bool
+                );
+                #[link_name = "\u{1}_ZN3app26FighterSpecializer_Gaogaen13generate_ropeERNS_21FighterModuleAccessorE"]
+                pub fn generate_rope(
+                    arg1: *mut root::app::FighterModuleAccessor
+                );
             }
         }
 
@@ -5717,8 +5763,8 @@ pub mod root {
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         effHash: root::phx::Hash40,
                         boneHash: root::phx::Hash40,
-                        radius: root::phx::simd::Vector2f,
-                        offsets: root::phx::simd::Vector3f,
+                        radius: root::phx::simd::Vector2,
+                        offsets: root::phx::simd::Vector3,
                         arg6: bool,
                         duration: f32,
                         fade: f32,
@@ -5729,8 +5775,8 @@ pub mod root {
                     pub fn set_post_effect_line_circle_target(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         boneHash: root::phx::Hash40,
-                        radius: root::phx::simd::Vector2f,
-                        offsets: root::phx::simd::Vector3f,
+                        radius: root::phx::simd::Vector2,
+                        offsets: root::phx::simd::Vector3,
                         arg5: bool,
                     );
                 }
@@ -5739,10 +5785,10 @@ pub mod root {
                     pub fn request_post_effect_line_parallel_2d(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         effHash: root::phx::Hash40,
-                        arg3: root::phx::simd::Vector2f,
-                        arg4: root::phx::simd::Vector2f,
-                        arg5: root::phx::simd::Vector2f,
-                        arg6: root::phx::simd::Vector2f,
+                        arg3: root::phx::simd::Vector2,
+                        arg4: root::phx::simd::Vector2,
+                        arg5: root::phx::simd::Vector2,
+                        arg6: root::phx::simd::Vector2,
                         arg7: bool,
                         duration: f32,
                         fade: f32,
@@ -8768,9 +8814,9 @@ pub mod root {
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app28FighterInklingLinkEventPaint13new_l2c_tableEv"]
-                    pub fn new_l2c_table()-> u64; 
-                    //This function isn't actually part of lua_bind::FighterInklingLinkEventPaint, but for now I'm just trying to test something and it won't build given its own module. 
-                }    
+                    pub fn new_l2c_table()-> u64;
+                    //This function isn't actually part of lua_bind::FighterInklingLinkEventPaint, but for now I'm just trying to test something and it won't build given its own module.
+                }
             }
             pub mod FighterControlModuleImpl {
                 #[allow(unused_imports)]
@@ -9518,13 +9564,21 @@ pub mod root {
                     pub fn get_active_num(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> u64;
+                    ) -> i32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind31ArticleModule__get_article_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn get_article(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
+                    ) -> *mut root::app::Article;
+                }
+                extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind39ArticleModule__get_article_from_no_implEPNS_26BattleObjectModuleAccessorEii"]
+                    pub fn get_article_from_no(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        arg2: libc::c_int,
+                        arg3: libc::c_int
                     ) -> *mut root::app::Article;
                 }
                 extern "C" {
@@ -11140,8 +11194,8 @@ pub mod root {
                     #[link_name = "\u{1}_ZN3app8lua_bind31WorkModule__count_down_int_implEPNS_26BattleObjectModuleAccessorEii"]
                     pub fn count_down_int(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
-                        value: libc::c_int,
                         int_const: libc::c_int,
+                        end_value: libc::c_int,
                     ) -> bool;
                 }
                 extern "C" {
@@ -14595,7 +14649,7 @@ pub mod root {
                         arg2: libc::c_int,
                         arg3: libc::c_int,
                         arg4: libc::c_int,
-                    ) -> root::phx::simd::Vector3f;
+                    ) -> root::phx::simd::Vector3;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind48FighterParamAccessor2__donkey_thrown_offset_implEPNS_21FighterParamAccessor2Eii"]
@@ -14603,7 +14657,7 @@ pub mod root {
                         arg1: *mut root::app::FighterParamAccessor2,
                         arg2: libc::c_int,
                         arg3: libc::c_int,
-                    ) -> root::phx::simd::Vector3f;
+                    ) -> root::phx::simd::Vector3;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind49FighterParamAccessor2__ridley_dragged_offset_implEPNS_21FighterParamAccessor2Eii"]
@@ -14611,21 +14665,21 @@ pub mod root {
                         arg1: *mut root::app::FighterParamAccessor2,
                         arg2: libc::c_int,
                         arg3: libc::c_int,
-                    ) -> root::phx::simd::Vector3f;
+                    ) -> root::phx::simd::Vector3;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind50FighterParamAccessor2__diddy_special_s_offset_implEPNS_21FighterParamAccessor2Ei"]
                     pub fn diddy_special_s_offset(
                         arg1: *mut root::app::FighterParamAccessor2,
                         arg2: libc::c_int,
-                    ) -> root::phx::simd::Vector3f;
+                    ) -> root::phx::simd::Vector3;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind52FighterParamAccessor2__miifighter_suplex_offset_implEPNS_21FighterParamAccessor2Ei"]
                     pub fn miifighter_suplex_offset(
                         arg1: *mut root::app::FighterParamAccessor2,
                         arg2: libc::c_int,
-                    ) -> root::phx::simd::Vector3f;
+                    ) -> root::phx::simd::Vector3;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind48FighterParamAccessor2__gaogaen_final_offset_implEPNS_21FighterParamAccessor2Eii"]
@@ -14633,7 +14687,7 @@ pub mod root {
                         arg1: *mut root::app::FighterParamAccessor2,
                         arg2: libc::c_int,
                         arg3: libc::c_int,
-                    ) -> root::phx::simd::Vector3f;
+                    ) -> root::phx::simd::Vector3;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind41FighterParamAccessor2__hit_target_no_implEPNS_21FighterParamAccessor2Eii"]
@@ -15079,7 +15133,7 @@ pub mod root {
                         arg1: *mut root::app::ItemManager,
                     ) -> u64;
                 }
-                
+
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app12item_manager22get_num_of_active_itemENS_8ItemKindE"]
                     pub fn get_num_of_active_item(
@@ -16536,7 +16590,7 @@ pub mod root {
                         arg2: root::phx::Hash40,
                         arg3: *mut root::phx::Vector3f,
                         arg4: bool,
-                    ) -> root::phx::Vector3f;
+                    );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind51ModelModule__joint_global_position_with_offset_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40ERKNS3_8Vector3fERS5_b"]
@@ -16546,7 +16600,7 @@ pub mod root {
                         arg3: *const root::phx::Vector3f,
                         arg4: *mut root::phx::Vector3f,
                         arg5: bool,
-                    ) -> root::phx::Vector3f;
+                    );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind46ModelModule__joint_global_offset_from_top_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40ERNS3_8Vector3fE"]
@@ -16554,7 +16608,7 @@ pub mod root {
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: root::phx::Hash40,
                         arg3: *mut root::phx::Vector3f,
-                    ) -> root::phx::Vector3f;
+                    );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind54ModelModule__top_joint_global_position_from_joint_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40ERKNS3_8Vector3fERS5_"]
@@ -16563,7 +16617,7 @@ pub mod root {
                         arg2: root::phx::Hash40,
                         arg3: *const root::phx::Vector3f,
                         arg4: *mut root::phx::Vector3f,
-                    ) -> root::phx::Vector3f;
+                    );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind39ModelModule__joint_global_rotation_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40ERNS3_8Vector3fEb"]
@@ -16572,7 +16626,7 @@ pub mod root {
                         arg2: root::phx::Hash40,
                         arg3: *mut root::phx::Vector3f,
                         arg4: bool,
-                    ) -> root::phx::Vector3f;
+                    );
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind35ModelModule__joint_global_axis_implEPNS_26BattleObjectModuleAccessorEN3phx6Hash40Eib"]
@@ -20560,7 +20614,7 @@ pub mod root {
                 pub fn entry_id(arg1: root::uint) -> libc::c_int;
             }
         }
-        
+
         pub mod sv_camera_manager {
             #[allow(unused_imports)]
             use super::super::super::root;
@@ -20680,7 +20734,7 @@ pub mod root {
                 pub fn get_kirifuda_position(
                     lua_state: u64,
                     arg2: i32
-                ) -> root::phx::simd::Vector2f;
+                ) -> root::phx::simd::Vector2;
                 #[link_name = "\u{1}_ZN3app15sv_fighter_util18get_walk_speed_mulEP9lua_State"]
                 pub fn get_walk_speed_mul(
                     lua_state: u64
@@ -21089,7 +21143,7 @@ pub mod root {
                 /// ```
                 /// l2c_agent.clear_lua_stack(); //clear the stack from any previous args
                 /// l2c_agent.push_lua_stack(&mut L2CValue::new_int(*FIGHTER_KINETIC_ENERGY_ID_CONTROL as u64)); //push the first arg, that being a KINETIC_ENERGY_ID const
-                /// l2c_agent.push_lua_stack(&mut L2CValue::new_num(5.0)); //push the second arg, that being a float of the new speed we want to set 
+                /// l2c_agent.push_lua_stack(&mut L2CValue::new_num(5.0)); //push the second arg, that being a float of the new speed we want to set
                 /// sv_kinetic_energy::set_speed(lua_state); //call the desired function with the lua state which will grab the args we previously pushed
                 /// ```
                 /// An L2CAgent can be obtained in multiple different contexts. One common place you'd have access to one is in `sys_line_system_control_fighter`
@@ -21480,7 +21534,7 @@ pub mod root {
         pub mod lua_const {
             pub use crate::lua_const::*;
         }
-        
+
         pub mod utility {
             extern "C" {
                 #[link_name = "\u{1}_ZNK3lib7utility8Variadic10get_formatEv"]
@@ -21502,7 +21556,7 @@ pub mod root {
                     }
                     ret
                }
-               pub fn get_format(&self) -> *const skyline::libc::c_char { 
+               pub fn get_format(&self) -> *const skyline::libc::c_char {
                    unsafe {
                        Variadic_get_format(self)
                    }
@@ -21759,6 +21813,12 @@ pub mod root {
             pub x: f32,
             pub y: f32,
         }
+        impl Vector2f {
+            pub fn new(x: f32, y: f32) -> Self {
+                Self{x, y}
+            }
+        }
+
         #[repr(C)]
         #[derive(Debug, Copy, Clone, PartialEq)]
         pub struct Vector3f {
@@ -21766,6 +21826,12 @@ pub mod root {
             pub y: f32,
             pub z: f32,
         }
+        impl Vector3f {
+            pub fn new(x: f32, y: f32, z: f32) -> Self {
+                Self{x, y, z}
+            }
+        }
+
         #[repr(C)]
         #[derive(Debug, Copy, Clone, PartialEq)]
         pub struct Vector4f {
@@ -21774,14 +21840,23 @@ pub mod root {
             pub z: f32,
             pub w: f32,
         }
+        impl Vector4f {
+            pub fn new(x: f32, y: f32, z: f32, w: f32) -> Self {
+                Self{x, y, z, w}
+            }
+        }
+
         pub mod simd{
             #[derive(Clone, Copy)]
             #[repr(simd)]
-            pub struct Vector2f {
+            pub struct Vector2 {
                 pub vec: [f32; 2]
             }
 
-            impl Vector2f {
+            impl Vector2 {
+                pub fn new(x: f32, y: f32) -> Self {
+                    Self{ vec: [x, y] }
+                }
                 pub fn x(self) -> f32 {
                     unsafe {
                         core::intrinsics::simd::simd_extract(self, 0)
@@ -21796,11 +21871,14 @@ pub mod root {
 
             #[derive(Clone, Copy)]
             #[repr(simd)]
-            pub struct Vector3f {
+            pub struct Vector3 {
                 pub vec: [f32; 3]
             }
 
-            impl Vector3f {
+            impl Vector3 {
+                pub fn new(x: f32, y: f32, z: f32) -> Self {
+                    Self{ vec: [x, y, z] }
+                }
                 pub fn x(self) -> f32 {
                     unsafe {
                         core::intrinsics::simd::simd_extract(self, 0)
@@ -21820,11 +21898,14 @@ pub mod root {
 
             #[derive(Clone, Copy)]
             #[repr(simd)]
-            pub struct Vector4f {
+            pub struct Vector4 {
                 pub vec: [f32; 4]
             }
 
-            impl Vector4f {
+            impl Vector4 {
+                pub fn new(x: f32, y: f32, z: f32, w: f32) -> Self {
+                    Self{ vec: [x, y, z, w] }
+                }
                 pub fn x(self) -> f32 {
                     unsafe {
                         core::intrinsics::simd::simd_extract(self, 0)
