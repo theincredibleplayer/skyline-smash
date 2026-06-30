@@ -20822,7 +20822,22 @@ pub mod root {
                 ) -> bool;
             }
         }
-
+        pub mod sv_global_parameter {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app19sv_global_parameter15melee_rule_typeEv"]
+                pub fn melee_rule_type() -> u64;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app19sv_global_parameter15melee_rule_modeEv"]
+                pub fn melee_rule_mode() -> u64;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app19sv_global_parameter28melee_melee_info_item_appearEv"]
+                pub fn melee_melee_info_item_appear() -> u64;
+            }
+        }
         pub mod sv_information {
             #[allow(unused_imports)]
             use super::super::super::root;
