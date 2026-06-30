@@ -11649,7 +11649,7 @@ pub mod root {
                         arg2: root::phx::Hash40,
                         arg3: libc::c_int,
                         arg4: bool,
-                        arg5: *const root::phx::Vector2,
+                        arg5: root::phx::simd::Vector2,
                         arg6: f32,
                         arg7: f32,
                         arg8: bool,
