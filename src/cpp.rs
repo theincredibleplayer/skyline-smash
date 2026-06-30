@@ -20790,6 +20790,70 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app14sv_information8stage_idEv"]
                 pub fn stage_id() -> i32;
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information13is_flat_stageEv"]
+                pub fn is_flat_stage() -> bool;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information27get_remaining_time_as_frameEv"]
+                pub fn get_remaining_time_as_frame() -> i32; // return type is a guess
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information14sleep_time_mulEP9lua_State"]
+                pub fn sleep_time_mul(
+                    lua_state: u64
+                ) -> f32; // return type is a guess
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information10owner_rankEP9lua_State"]
+                pub fn owner_rank(
+                    lua_state: u64
+                ) -> i32; // return type is a guess
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information11owner_handiEP9lua_State"]
+                pub fn owner_handi(
+                    lua_state: u64
+                ) -> i32; // return type is a guess
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information23is_stage_can_dead_frontEv"]
+                pub fn is_stage_can_dead_front() -> bool;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information22is_stage_can_dead_backEv"]
+                pub fn is_stage_can_dead_back() -> bool;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information20is_master_hand_stageEv"]
+                pub fn is_master_hand_stage() -> bool;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information21is_enabled_time_limitEv"]
+                pub fn is_enabled_time_limit() -> bool;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information20is_disable_lock_downEv"]
+                pub fn is_disable_lock_down() -> bool;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information22is_dead_up_force_crushEP9lua_State"]
+                pub fn is_dead_up_force_crush(
+                    lua_state: u64
+                ) -> bool;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information15get_delta_frameEv"]
+                pub fn get_delta_frame() -> f32;  //return type is a guess
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information12dead_up_typeEv"]
+                pub fn dead_up_type() -> i32;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information24dead_up_camera_hit_countEv"]
+                pub fn dead_up_camera_hit_count() -> i32;
+            }
         }
         pub mod sv_kinetic_energy {
             #[allow(unused_imports)]
