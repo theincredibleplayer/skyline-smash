@@ -11653,7 +11653,7 @@ pub mod root {
                         arg2: root::phx::Hash40,
                         arg3: libc::c_int,
                         arg4: bool,
-                        arg5: root::phx::simd::Vector2,
+                        arg5: *const root::phx::Vector2f,
                         arg6: f32,
                         arg7: f32,
                         arg8: bool,
@@ -15301,8 +15301,8 @@ pub mod root {
                     pub fn set_area_shape_aabb(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                        arg3: root::phx::simd::Vector2,
-                        arg4: root::phx::simd::Vector2,
+                        arg3: *const root::phx::simd::Vector2,
+                        arg4: *const root::phx::simd::Vector2,
                     );
                 }
                 extern "C" {
@@ -15310,7 +15310,7 @@ pub mod root {
                     pub fn set_area_shape_circle(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                        arg3: root::phx::simd::Vector2,
+                        arg3: *const root::phx::simd::Vector2,
                         arg4: f32,
                     );
                 }
